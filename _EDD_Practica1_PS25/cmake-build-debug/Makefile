@@ -153,6 +153,270 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/controllers/GameController.o: src/controllers/GameController.cpp.o
+.PHONY : src/controllers/GameController.o
+
+# target to build an object file
+src/controllers/GameController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.o
+.PHONY : src/controllers/GameController.cpp.o
+
+src/controllers/GameController.i: src/controllers/GameController.cpp.i
+.PHONY : src/controllers/GameController.i
+
+# target to preprocess a source file
+src/controllers/GameController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.i
+.PHONY : src/controllers/GameController.cpp.i
+
+src/controllers/GameController.s: src/controllers/GameController.cpp.s
+.PHONY : src/controllers/GameController.s
+
+# target to generate assembly for a file
+src/controllers/GameController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.s
+.PHONY : src/controllers/GameController.cpp.s
+
+src/controllers/PalabrasController.o: src/controllers/PalabrasController.cpp.o
+.PHONY : src/controllers/PalabrasController.o
+
+# target to build an object file
+src/controllers/PalabrasController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/PalabrasController.cpp.o
+.PHONY : src/controllers/PalabrasController.cpp.o
+
+src/controllers/PalabrasController.i: src/controllers/PalabrasController.cpp.i
+.PHONY : src/controllers/PalabrasController.i
+
+# target to preprocess a source file
+src/controllers/PalabrasController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/PalabrasController.cpp.i
+.PHONY : src/controllers/PalabrasController.cpp.i
+
+src/controllers/PalabrasController.s: src/controllers/PalabrasController.cpp.s
+.PHONY : src/controllers/PalabrasController.s
+
+# target to generate assembly for a file
+src/controllers/PalabrasController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/PalabrasController.cpp.s
+.PHONY : src/controllers/PalabrasController.cpp.s
+
+src/controllers/ReportsController.o: src/controllers/ReportsController.cpp.o
+.PHONY : src/controllers/ReportsController.o
+
+# target to build an object file
+src/controllers/ReportsController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.o
+.PHONY : src/controllers/ReportsController.cpp.o
+
+src/controllers/ReportsController.i: src/controllers/ReportsController.cpp.i
+.PHONY : src/controllers/ReportsController.i
+
+# target to preprocess a source file
+src/controllers/ReportsController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.i
+.PHONY : src/controllers/ReportsController.cpp.i
+
+src/controllers/ReportsController.s: src/controllers/ReportsController.cpp.s
+.PHONY : src/controllers/ReportsController.s
+
+# target to generate assembly for a file
+src/controllers/ReportsController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.s
+.PHONY : src/controllers/ReportsController.cpp.s
+
+src/models/Ficha.o: src/models/Ficha.cpp.o
+.PHONY : src/models/Ficha.o
+
+# target to build an object file
+src/models/Ficha.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Ficha.cpp.o
+.PHONY : src/models/Ficha.cpp.o
+
+src/models/Ficha.i: src/models/Ficha.cpp.i
+.PHONY : src/models/Ficha.i
+
+# target to preprocess a source file
+src/models/Ficha.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Ficha.cpp.i
+.PHONY : src/models/Ficha.cpp.i
+
+src/models/Ficha.s: src/models/Ficha.cpp.s
+.PHONY : src/models/Ficha.s
+
+# target to generate assembly for a file
+src/models/Ficha.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Ficha.cpp.s
+.PHONY : src/models/Ficha.cpp.s
+
+src/models/Jugador.o: src/models/Jugador.cpp.o
+.PHONY : src/models/Jugador.o
+
+# target to build an object file
+src/models/Jugador.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Jugador.cpp.o
+.PHONY : src/models/Jugador.cpp.o
+
+src/models/Jugador.i: src/models/Jugador.cpp.i
+.PHONY : src/models/Jugador.i
+
+# target to preprocess a source file
+src/models/Jugador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Jugador.cpp.i
+.PHONY : src/models/Jugador.cpp.i
+
+src/models/Jugador.s: src/models/Jugador.cpp.s
+.PHONY : src/models/Jugador.s
+
+# target to generate assembly for a file
+src/models/Jugador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Jugador.cpp.s
+.PHONY : src/models/Jugador.cpp.s
+
+src/models/Movimiento.o: src/models/Movimiento.cpp.o
+.PHONY : src/models/Movimiento.o
+
+# target to build an object file
+src/models/Movimiento.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.o
+.PHONY : src/models/Movimiento.cpp.o
+
+src/models/Movimiento.i: src/models/Movimiento.cpp.i
+.PHONY : src/models/Movimiento.i
+
+# target to preprocess a source file
+src/models/Movimiento.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.i
+.PHONY : src/models/Movimiento.cpp.i
+
+src/models/Movimiento.s: src/models/Movimiento.cpp.s
+.PHONY : src/models/Movimiento.s
+
+# target to generate assembly for a file
+src/models/Movimiento.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.s
+.PHONY : src/models/Movimiento.cpp.s
+
+src/models/Tablero.o: src/models/Tablero.cpp.o
+.PHONY : src/models/Tablero.o
+
+# target to build an object file
+src/models/Tablero.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o
+.PHONY : src/models/Tablero.cpp.o
+
+src/models/Tablero.i: src/models/Tablero.cpp.i
+.PHONY : src/models/Tablero.i
+
+# target to preprocess a source file
+src/models/Tablero.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.i
+.PHONY : src/models/Tablero.cpp.i
+
+src/models/Tablero.s: src/models/Tablero.cpp.s
+.PHONY : src/models/Tablero.s
+
+# target to generate assembly for a file
+src/models/Tablero.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.s
+.PHONY : src/models/Tablero.cpp.s
+
+src/structs/ListaEnlazada/ListaFichas.o: src/structs/ListaEnlazada/ListaFichas.cpp.o
+.PHONY : src/structs/ListaEnlazada/ListaFichas.o
+
+# target to build an object file
+src/structs/ListaEnlazada/ListaFichas.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/ListaEnlazada/ListaFichas.cpp.o
+.PHONY : src/structs/ListaEnlazada/ListaFichas.cpp.o
+
+src/structs/ListaEnlazada/ListaFichas.i: src/structs/ListaEnlazada/ListaFichas.cpp.i
+.PHONY : src/structs/ListaEnlazada/ListaFichas.i
+
+# target to preprocess a source file
+src/structs/ListaEnlazada/ListaFichas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/ListaEnlazada/ListaFichas.cpp.i
+.PHONY : src/structs/ListaEnlazada/ListaFichas.cpp.i
+
+src/structs/ListaEnlazada/ListaFichas.s: src/structs/ListaEnlazada/ListaFichas.cpp.s
+.PHONY : src/structs/ListaEnlazada/ListaFichas.s
+
+# target to generate assembly for a file
+src/structs/ListaEnlazada/ListaFichas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/ListaEnlazada/ListaFichas.cpp.s
+.PHONY : src/structs/ListaEnlazada/ListaFichas.cpp.s
+
+src/structs/ListaEnlazada/NodoLista.o: src/structs/ListaEnlazada/NodoLista.cpp.o
+.PHONY : src/structs/ListaEnlazada/NodoLista.o
+
+# target to build an object file
+src/structs/ListaEnlazada/NodoLista.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/ListaEnlazada/NodoLista.cpp.o
+.PHONY : src/structs/ListaEnlazada/NodoLista.cpp.o
+
+src/structs/ListaEnlazada/NodoLista.i: src/structs/ListaEnlazada/NodoLista.cpp.i
+.PHONY : src/structs/ListaEnlazada/NodoLista.i
+
+# target to preprocess a source file
+src/structs/ListaEnlazada/NodoLista.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/ListaEnlazada/NodoLista.cpp.i
+.PHONY : src/structs/ListaEnlazada/NodoLista.cpp.i
+
+src/structs/ListaEnlazada/NodoLista.s: src/structs/ListaEnlazada/NodoLista.cpp.s
+.PHONY : src/structs/ListaEnlazada/NodoLista.s
+
+# target to generate assembly for a file
+src/structs/ListaEnlazada/NodoLista.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/ListaEnlazada/NodoLista.cpp.s
+.PHONY : src/structs/ListaEnlazada/NodoLista.cpp.s
+
+src/structs/Pila/NodoPila.o: src/structs/Pila/NodoPila.cpp.o
+.PHONY : src/structs/Pila/NodoPila.o
+
+# target to build an object file
+src/structs/Pila/NodoPila.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Pila/NodoPila.cpp.o
+.PHONY : src/structs/Pila/NodoPila.cpp.o
+
+src/structs/Pila/NodoPila.i: src/structs/Pila/NodoPila.cpp.i
+.PHONY : src/structs/Pila/NodoPila.i
+
+# target to preprocess a source file
+src/structs/Pila/NodoPila.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Pila/NodoPila.cpp.i
+.PHONY : src/structs/Pila/NodoPila.cpp.i
+
+src/structs/Pila/NodoPila.s: src/structs/Pila/NodoPila.cpp.s
+.PHONY : src/structs/Pila/NodoPila.s
+
+# target to generate assembly for a file
+src/structs/Pila/NodoPila.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Pila/NodoPila.cpp.s
+.PHONY : src/structs/Pila/NodoPila.cpp.s
+
+src/structs/Pila/PilaMovimiento.o: src/structs/Pila/PilaMovimiento.cpp.o
+.PHONY : src/structs/Pila/PilaMovimiento.o
+
+# target to build an object file
+src/structs/Pila/PilaMovimiento.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Pila/PilaMovimiento.cpp.o
+.PHONY : src/structs/Pila/PilaMovimiento.cpp.o
+
+src/structs/Pila/PilaMovimiento.i: src/structs/Pila/PilaMovimiento.cpp.i
+.PHONY : src/structs/Pila/PilaMovimiento.i
+
+# target to preprocess a source file
+src/structs/Pila/PilaMovimiento.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Pila/PilaMovimiento.cpp.i
+.PHONY : src/structs/Pila/PilaMovimiento.cpp.i
+
+src/structs/Pila/PilaMovimiento.s: src/structs/Pila/PilaMovimiento.cpp.s
+.PHONY : src/structs/Pila/PilaMovimiento.s
+
+# target to generate assembly for a file
+src/structs/Pila/PilaMovimiento.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Pila/PilaMovimiento.cpp.s
+.PHONY : src/structs/Pila/PilaMovimiento.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +429,39 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/controllers/GameController.o"
+	@echo "... src/controllers/GameController.i"
+	@echo "... src/controllers/GameController.s"
+	@echo "... src/controllers/PalabrasController.o"
+	@echo "... src/controllers/PalabrasController.i"
+	@echo "... src/controllers/PalabrasController.s"
+	@echo "... src/controllers/ReportsController.o"
+	@echo "... src/controllers/ReportsController.i"
+	@echo "... src/controllers/ReportsController.s"
+	@echo "... src/models/Ficha.o"
+	@echo "... src/models/Ficha.i"
+	@echo "... src/models/Ficha.s"
+	@echo "... src/models/Jugador.o"
+	@echo "... src/models/Jugador.i"
+	@echo "... src/models/Jugador.s"
+	@echo "... src/models/Movimiento.o"
+	@echo "... src/models/Movimiento.i"
+	@echo "... src/models/Movimiento.s"
+	@echo "... src/models/Tablero.o"
+	@echo "... src/models/Tablero.i"
+	@echo "... src/models/Tablero.s"
+	@echo "... src/structs/ListaEnlazada/ListaFichas.o"
+	@echo "... src/structs/ListaEnlazada/ListaFichas.i"
+	@echo "... src/structs/ListaEnlazada/ListaFichas.s"
+	@echo "... src/structs/ListaEnlazada/NodoLista.o"
+	@echo "... src/structs/ListaEnlazada/NodoLista.i"
+	@echo "... src/structs/ListaEnlazada/NodoLista.s"
+	@echo "... src/structs/Pila/NodoPila.o"
+	@echo "... src/structs/Pila/NodoPila.i"
+	@echo "... src/structs/Pila/NodoPila.s"
+	@echo "... src/structs/Pila/PilaMovimiento.o"
+	@echo "... src/structs/Pila/PilaMovimiento.i"
+	@echo "... src/structs/Pila/PilaMovimiento.s"
 .PHONY : help
 
 
