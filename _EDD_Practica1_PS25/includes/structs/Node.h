@@ -10,14 +10,14 @@
 template <class T> class Node {
 
 private:
-    T data;
+    T *data;
     Node *next;
 
 public:
-    Node(T value);
+    Node(T *value);
 
-    T getData();
-    void setData(T value);
+    T *getData();
+    void setData(T *value);
 
     Node *getNext();
     void setNext(Node *next);

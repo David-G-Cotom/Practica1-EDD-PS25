@@ -48,7 +48,7 @@ void Tablero::imprimirTablero() {
 }
 
 bool Tablero::isCasillaValida(int x, int y) {
-    return x >= 0 && x < SIZE && y >= 0 && y < SIZE && this->tablero[x][y] != this->SIMBOLO_CASILLA_BLOQUEADA;
+    return x >= 0 && x < SIZE && y >= 0 && y < SIZE && this->tablero[x][y] == this->SIMBOLO_CASILLA_LIBRE;
 }
 
 

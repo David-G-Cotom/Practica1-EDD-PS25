@@ -36,6 +36,8 @@ public:
 
     void insertarFichaOrdenada(Node<Ficha> *ficha);
 
+    void imprimirFichas();
+
 };
 
 

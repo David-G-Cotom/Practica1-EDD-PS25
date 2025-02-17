@@ -36,7 +36,7 @@ void FichasController::distribuirFichas(LinkedList<Ficha> *listaGeneralFichas, L
 
             int index = rand() % cantidadFichas;
             Node<Ficha> *fichaSeleccionada = listaGeneralFichas->eliminarFicha(index);
-            jugadores->getElement(i)->getData().insertarFichaOrdenada(fichaSeleccionada);
+            jugadores->getElement(i)->getData()->insertarFichaOrdenada(fichaSeleccionada);
             cantidadFichas--;
         }
     }

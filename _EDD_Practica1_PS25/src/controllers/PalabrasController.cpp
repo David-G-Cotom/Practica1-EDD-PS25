@@ -8,7 +8,6 @@
 #include <iostream>
 #include <sstream>
 
-#include "../../includes/structs/LinkedList.h"
 
 PalabrasController::PalabrasController() {
 
@@ -45,7 +44,7 @@ void PalabrasController::ordenarPalabras(LinkedList<std::string> *palabrasExtrai
     for (int i = 0; i < palabrasExtraidas->getSize() - 1; i++) {
         for (int j = i + 1; j < palabrasExtraidas->getSize(); j++) {
             if (palabrasExtraidas->getElement(i)->getData() > palabrasExtraidas->getElement(j)->getData()) {
-                std::string aux = palabrasExtraidas->getElement(i)->getData();
+                std::string *aux = palabrasExtraidas->getElement(i)->getData();
                 palabrasExtraidas->getElement(i)->setData(palabrasExtraidas->getElement(j)->getData());
                 palabrasExtraidas->getElement(j)->setData(aux);
             }
@@ -56,7 +55,7 @@ void PalabrasController::ordenarPalabras(LinkedList<std::string> *palabrasExtrai
 bool PalabrasController::isPalabraValida(std::string &palabra, LinkedList<std::string> *palabraExtraidas) {
     Node<std::string> *aux = palabraExtraidas->getRaiz();
     while (aux != nullptr) {
-        if (aux->getData() == palabra) return true;
+        if (*aux->getData() == palabra) return true;
         aux = aux->getNext();
     }
     return false;
