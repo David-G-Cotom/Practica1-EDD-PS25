@@ -8,7 +8,6 @@
 #include <string>
 
 #include "../models/Jugador.h"
-#include "../structs/ListaEnlazada/ListaFichas.h"
 
 
 class FichasController {
@@ -16,9 +15,9 @@ class FichasController {
     public:
     FichasController();
 
-    ListaFichas *crearFichasIniciales(std::string palabrasIniciales[], int cantidadPalabras);
+    LinkedList<Ficha> *crearFichasIniciales(LinkedList<std::string> *palabrasIniciales);
 
-    void distribuirFichas(ListaFichas *listaGeneralFichas, Jugador jugadores[], int cantidadJugadores);
+    void distribuirFichas(LinkedList<Ficha> *listaGeneralFichas, LinkedList<Jugador> *jugadores);
 
 };
 

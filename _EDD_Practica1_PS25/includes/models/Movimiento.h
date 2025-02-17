@@ -6,7 +6,8 @@
 #define MOVIMIENTO_H
 #include <string>
 
-#include "../structs/ListaEnlazada/ListaFichas.h"
+#include "../structs/LinkedList.h"
+#include "Ficha.h"
 
 
 class Movimiento {
@@ -15,7 +16,7 @@ private:
     std::string nombreJugador;
     std::string palabra;
     int puntuacionMovimiento;
-    ListaFichas *listaFichasUtilizadas;
+    LinkedList<Ficha> *listaFichasUtilizadas;
     int contadorFichas;
 
 public:
@@ -30,8 +31,8 @@ public:
     int getPuntuacionMovimiento();
     void setPuntuacionMovimiento(int puntuacion);
 
-    ListaFichas *getListaFichasUtilizadas();
-    void setListaFichasUtilizadas(ListaFichas *listaFichasUtilizadas);
+    LinkedList<Ficha> *getListaFichasUtilizadas();
+    void setListaFichasUtilizadas(LinkedList<Ficha> *listaFichasUtilizadas);
 
     int getContadorFichas();
     void setContadorFichas(int contadorFichas);

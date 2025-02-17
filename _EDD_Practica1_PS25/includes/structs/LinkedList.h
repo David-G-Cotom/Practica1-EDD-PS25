@@ -13,6 +13,7 @@ template <class T> class LinkedList {
 
 private:
     Node<T> *raiz;
+    int size;
 
 public:
     LinkedList();
@@ -20,9 +21,17 @@ public:
     Node<T> *getRaiz();
     void setRaiz(Node<T> *raiz);
 
-    void insertar(T value);
+    int getSize();
+    void setSize(int size);
+
+    Node<T> *getElement(int index);
+
+    void insertar(T *value);
 
     void eliminar(T value);
+    Node<T> *eliminarFicha(int index);
+
+    bool isEmpty();
 
 };
 

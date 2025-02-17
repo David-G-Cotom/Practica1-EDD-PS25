@@ -6,15 +6,17 @@
 #define PALABRASCONTROLLER_H
 #include <string>
 
+#include "../structs/LinkedList.h"
+
 
 class PalabrasController {
 
 public:
     PalabrasController();
 
-    int cargarPalabras(std::string &nombreArchivo, std::string palabrasExtraidas[]);
-    void ordenarPalabras(std::string palabrasExtraidas[], int cantidadPalabras);
-    bool isPalabraValida(std::string &palabra, std::string palabraExtraidas[], int cantidadPalabras);
+    LinkedList<std::string> *cargarPalabras(std::string &nombreArchivo);
+    void ordenarPalabras(LinkedList<std::string> *palabrasExtraidas);
+    bool isPalabraValida(std::string &palabra, LinkedList<std::string> *palabraExtraidas);
 
 };
 

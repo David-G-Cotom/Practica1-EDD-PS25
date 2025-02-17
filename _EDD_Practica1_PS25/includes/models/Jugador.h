@@ -6,7 +6,8 @@
 #define JUGADOR_H
 #include <string>
 
-#include "../structs/ListaEnlazada/ListaFichas.h"
+#include "../structs/LinkedList.h"
+#include "Ficha.h"
 
 
 class Jugador {
@@ -15,7 +16,7 @@ private:
     std::string nombre;
     int puntos;
     int movimientos;
-    ListaFichas *listaFichas;
+    LinkedList<Ficha> *listaFichas;
 
 public:
     Jugador();
@@ -30,8 +31,10 @@ public:
     int getMovimientos();
     void setMovimientos(int movimientos);
 
-    ListaFichas *getListaFichas();
-    void setListaFichas(ListaFichas *listaFichas);
+    LinkedList<Ficha> *getListaFichas();
+    void setListaFichas(LinkedList<Ficha> *listaFichas);
+
+    void insertarFichaOrdenada(Node<Ficha> *ficha);
 
 };
 

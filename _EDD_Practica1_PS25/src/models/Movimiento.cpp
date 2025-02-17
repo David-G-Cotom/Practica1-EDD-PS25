@@ -36,11 +36,11 @@ void Movimiento::setPuntuacionMovimiento(int puntuacionMovimiento) {
     this->puntuacionMovimiento = puntuacionMovimiento;
 }
 
-ListaFichas *Movimiento::getListaFichasUtilizadas() {
+LinkedList<Ficha> *Movimiento::getListaFichasUtilizadas() {
     return this->listaFichasUtilizadas;
 }
 
-void Movimiento::setListaFichasUtilizadas(ListaFichas *listaFichasUtilizadas) {
+void Movimiento::setListaFichasUtilizadas(LinkedList<Ficha> *listaFichasUtilizadas) {
     this->listaFichasUtilizadas = listaFichasUtilizadas;
 }
 

@@ -15,7 +15,7 @@ Jugador::Jugador(std::string nombre) {
     this->nombre = nombre;
     this->puntos = 0;
     this->movimientos = 0;
-    this->listaFichas = new ListaFichas();
+    this->listaFichas = new LinkedList<Ficha>;
 }
 
 std::string Jugador::getNombre() {
@@ -42,12 +42,30 @@ void Jugador::setMovimientos(int movimientos) {
     this->movimientos = movimientos;
 }
 
-ListaFichas* Jugador::getListaFichas() {
+LinkedList<Ficha>* Jugador::getListaFichas() {
     return this->listaFichas;
 }
 
-void Jugador::setListaFichas(ListaFichas *listaFichas) {
+void Jugador::setListaFichas(LinkedList<Ficha> *listaFichas) {
     this->listaFichas = listaFichas;
+}
+
+// Inserta una ficha en la lista enlazada ordenada de mayor a menor valor.
+// Complejidad: O(n log n)
+void Jugador::insertarFichaOrdenada(Node<Ficha> *nodoNuevo) {
+    if (this->listaFichas->isEmpty() || nodoNuevo->getData().getValor() > this->listaFichas->getRaiz()->getData().getValor()) {
+        nodoNuevo->setNext(this->listaFichas->getRaiz());
+        this->listaFichas->setRaiz(nodoNuevo);
+    } else {
+        Node<Ficha> *aux = this->listaFichas->getRaiz();
+        while (aux->getNext() != nullptr
+            && aux->getNext()->getData().getValor() >= nodoNuevo->getData().getValor()) {
+            aux = aux->getNext();
+            }
+        nodoNuevo->setNext(aux->getNext());
+        aux->setNext(nodoNuevo);
+    }
+    this->listaFichas->setSize(this->listaFichas->getSize() + 1);
 }
 
 
