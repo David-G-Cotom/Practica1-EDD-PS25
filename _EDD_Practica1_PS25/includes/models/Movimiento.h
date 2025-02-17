@@ -19,7 +19,7 @@ private:
     int contadorFichas;
 
 public:
-    Movimiento();
+    Movimiento(std::string nombreJugador, std::string palabra, int puntuacionMovimiento, Ficha *fichaJugada, int contadorFichas);
 
     std::string getNombreJugador();
     void setNombreJugador(std::string nombreJugador);

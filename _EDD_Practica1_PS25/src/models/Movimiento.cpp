@@ -4,12 +4,12 @@
 
 #include "../../includes/models/Movimiento.h"
 
-Movimiento::Movimiento() {
-    this->nombreJugador = "";
-    this->palabra = "";
-    this->puntuacionMovimiento = 0;
+Movimiento::Movimiento(std::string nombreJugador, std::string palabra, int puntuacionMovimiento, Ficha *fichaJugada, int contadorFichas) {
+    this->nombreJugador = nombreJugador;
+    this->palabra = palabra;
+    this->puntuacionMovimiento = puntuacionMovimiento;
     this->listaFichasUtilizadas = nullptr;
-    this->contadorFichas = 0;
+    this->contadorFichas = contadorFichas;
 }
 
 std::string Movimiento::getNombreJugador() {

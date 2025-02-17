@@ -60,7 +60,8 @@
 				16,
 				18,
 				20,
-				22
+				22,
+				24
 			]
 		}
 	],
@@ -104,7 +105,8 @@
 				16,
 				18,
 				20,
-				22
+				22,
+				24
 			]
 		},
 		{
@@ -121,7 +123,8 @@
 				15,
 				17,
 				19,
-				21
+				21,
+				23
 			]
 		}
 	],
@@ -252,6 +255,17 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/controllers/ReportsController.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "includes/controllers/FichasController.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/controllers/FichasController.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

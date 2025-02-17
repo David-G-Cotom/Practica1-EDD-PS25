@@ -11,11 +11,11 @@ Jugador::Jugador() {
     this->listaFichas = nullptr;
 }
 
-Jugador::Jugador(std::string nombre, int puntos, int movimientos) {
+Jugador::Jugador(std::string nombre) {
     this->nombre = nombre;
-    this->puntos = puntos;
-    this->movimientos = movimientos;
-    this->listaFichas = nullptr;
+    this->puntos = 0;
+    this->movimientos = 0;
+    this->listaFichas = new ListaFichas();
 }
 
 std::string Jugador::getNombre() {

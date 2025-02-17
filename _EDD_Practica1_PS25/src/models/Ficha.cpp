@@ -5,7 +5,7 @@
 #include "../../includes/models/Ficha.h"
 
 Ficha::Ficha() {
-    this->letra = '';
+    this->letra = ' ';
     this->valor = 0;
 }
 

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/_EDD_Practica1_PS25.dir/main.cpp.o"
   "CMakeFiles/_EDD_Practica1_PS25.dir/main.cpp.o.d"
+  "CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o"
+  "CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o.d"
   "CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.o"
   "CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.o.d"
   "CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/PalabrasController.cpp.o"

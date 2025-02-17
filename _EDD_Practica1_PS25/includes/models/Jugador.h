@@ -19,7 +19,7 @@ private:
 
 public:
     Jugador();
-    Jugador(std::string nombre, int puntos, int movimientos);
+    Jugador(std::string nombre);
 
     std::string getNombre();
     void setNombre(std::string nombre);

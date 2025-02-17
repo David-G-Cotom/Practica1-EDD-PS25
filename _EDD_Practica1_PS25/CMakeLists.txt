@@ -26,4 +26,6 @@ add_executable(_EDD_Practica1_PS25 main.cpp
         src/controllers/GameController.cpp
         includes/controllers/ReportsController.h
         src/controllers/ReportsController.cpp
+        includes/controllers/FichasController.h
+        src/controllers/FichasController.cpp
 )

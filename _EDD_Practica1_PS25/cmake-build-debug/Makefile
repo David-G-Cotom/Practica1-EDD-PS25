@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/controllers/FichasController.o: src/controllers/FichasController.cpp.o
+.PHONY : src/controllers/FichasController.o
+
+# target to build an object file
+src/controllers/FichasController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o
+.PHONY : src/controllers/FichasController.cpp.o
+
+src/controllers/FichasController.i: src/controllers/FichasController.cpp.i
+.PHONY : src/controllers/FichasController.i
+
+# target to preprocess a source file
+src/controllers/FichasController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.i
+.PHONY : src/controllers/FichasController.cpp.i
+
+src/controllers/FichasController.s: src/controllers/FichasController.cpp.s
+.PHONY : src/controllers/FichasController.s
+
+# target to generate assembly for a file
+src/controllers/FichasController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.s
+.PHONY : src/controllers/FichasController.cpp.s
+
 src/controllers/GameController.o: src/controllers/GameController.cpp.o
 .PHONY : src/controllers/GameController.o
 
@@ -429,6 +453,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/controllers/FichasController.o"
+	@echo "... src/controllers/FichasController.i"
+	@echo "... src/controllers/FichasController.s"
 	@echo "... src/controllers/GameController.o"
 	@echo "... src/controllers/GameController.i"
 	@echo "... src/controllers/GameController.s"

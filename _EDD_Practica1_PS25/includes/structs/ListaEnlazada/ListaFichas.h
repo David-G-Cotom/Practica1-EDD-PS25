@@ -32,7 +32,10 @@ public:
     NodoLista *getElement(int index);
 
     void insertarFicha(Ficha *ficha);
-    void eliminarFicha();
+    void insertarFichaOrdenada(NodoLista *ficha);
+
+    NodoLista *eliminarFicha(char letra);
+    NodoLista *eliminarFicha(int index);
 
     void recorrerLista();
 

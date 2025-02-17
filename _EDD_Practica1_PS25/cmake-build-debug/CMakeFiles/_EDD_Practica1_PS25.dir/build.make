@@ -237,6 +237,20 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.s: cmak
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/ReportsController.cpp" -o CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.s
 
+CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o: CMakeFiles/_EDD_Practica1_PS25.dir/flags.make
+CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/FichasController.cpp
+CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o: CMakeFiles/_EDD_Practica1_PS25.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o -MF CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o.d -o CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o -c "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/FichasController.cpp"
+
+CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/FichasController.cpp" > CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.i
+
+CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/FichasController.cpp" -o CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.s
+
 # Object files for target _EDD_Practica1_PS25
 _EDD_Practica1_PS25_OBJECTS = \
 "CMakeFiles/_EDD_Practica1_PS25.dir/main.cpp.o" \
@@ -250,7 +264,8 @@ _EDD_Practica1_PS25_OBJECTS = \
 "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o" \
 "CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/PalabrasController.cpp.o" \
 "CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.o" \
-"CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.o"
+"CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.o" \
+"CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o"
 
 # External object files for target _EDD_Practica1_PS25
 _EDD_Practica1_PS25_EXTERNAL_OBJECTS =
@@ -267,9 +282,10 @@ _EDD_Practica1_PS25: CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o
 _EDD_Practica1_PS25: CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/PalabrasController.cpp.o
 _EDD_Practica1_PS25: CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.o
 _EDD_Practica1_PS25: CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.o
+_EDD_Practica1_PS25: CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/FichasController.cpp.o
 _EDD_Practica1_PS25: CMakeFiles/_EDD_Practica1_PS25.dir/build.make
 _EDD_Practica1_PS25: CMakeFiles/_EDD_Practica1_PS25.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable _EDD_Practica1_PS25"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable _EDD_Practica1_PS25"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/_EDD_Practica1_PS25.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
