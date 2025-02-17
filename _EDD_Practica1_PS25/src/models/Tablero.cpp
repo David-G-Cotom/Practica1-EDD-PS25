@@ -16,7 +16,7 @@ void Tablero::inicializarTablero() {
     int columnas = sizeof(this->tablero[0])/sizeof(this->tablero[0][0]);
     for (int i = 0; i < filas; i++) {
         for (int j = 0; j < columnas; j++) {
-            this->tablero[i][j] = ' ';
+            this->tablero[i][j] = this->SIMBOLO_CASILLA_LIBRE;
         }
     }
     this->bloquearCasillas();
@@ -29,8 +29,8 @@ void Tablero::bloquearCasillas() {
     while (contador < this->CASILLAS_BLOQUEADAS) {
         int i = rand() % filasTablero;
         int j = rand() % columnasTablero;
-        if (this->tablero[i][j] == ' ') {
-            this->tablero[i][j] = '-';
+        if (this->tablero[i][j] == this->SIMBOLO_CASILLA_LIBRE) {
+            this->tablero[i][j] = this->SIMBOLO_CASILLA_BLOQUEADA;
             contador++;
         }
     }
@@ -46,5 +46,10 @@ void Tablero::imprimirTablero() {
         std::cout << "|" << std::endl;
     }
 }
+
+bool Tablero::isCasillaValida(int x, int y) {
+    return x >= 0 && x < SIZE && y >= 0 && y < SIZE && this->tablero[x][y] != this->SIMBOLO_CASILLA_BLOQUEADA;
+}
+
 
 

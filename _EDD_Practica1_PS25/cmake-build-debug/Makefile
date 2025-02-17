@@ -345,6 +345,54 @@ src/models/Tablero.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.s
 .PHONY : src/models/Tablero.cpp.s
 
+src/structs/Cola.o: src/structs/Cola.cpp.o
+.PHONY : src/structs/Cola.o
+
+# target to build an object file
+src/structs/Cola.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Cola.cpp.o
+.PHONY : src/structs/Cola.cpp.o
+
+src/structs/Cola.i: src/structs/Cola.cpp.i
+.PHONY : src/structs/Cola.i
+
+# target to preprocess a source file
+src/structs/Cola.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Cola.cpp.i
+.PHONY : src/structs/Cola.cpp.i
+
+src/structs/Cola.s: src/structs/Cola.cpp.s
+.PHONY : src/structs/Cola.s
+
+# target to generate assembly for a file
+src/structs/Cola.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Cola.cpp.s
+.PHONY : src/structs/Cola.cpp.s
+
+src/structs/LinkedList.o: src/structs/LinkedList.cpp.o
+.PHONY : src/structs/LinkedList.o
+
+# target to build an object file
+src/structs/LinkedList.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/LinkedList.cpp.o
+.PHONY : src/structs/LinkedList.cpp.o
+
+src/structs/LinkedList.i: src/structs/LinkedList.cpp.i
+.PHONY : src/structs/LinkedList.i
+
+# target to preprocess a source file
+src/structs/LinkedList.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/LinkedList.cpp.i
+.PHONY : src/structs/LinkedList.cpp.i
+
+src/structs/LinkedList.s: src/structs/LinkedList.cpp.s
+.PHONY : src/structs/LinkedList.s
+
+# target to generate assembly for a file
+src/structs/LinkedList.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/LinkedList.cpp.s
+.PHONY : src/structs/LinkedList.cpp.s
+
 src/structs/ListaEnlazada/ListaFichas.o: src/structs/ListaEnlazada/ListaFichas.cpp.o
 .PHONY : src/structs/ListaEnlazada/ListaFichas.o
 
@@ -392,6 +440,30 @@ src/structs/ListaEnlazada/NodoLista.s: src/structs/ListaEnlazada/NodoLista.cpp.s
 src/structs/ListaEnlazada/NodoLista.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/ListaEnlazada/NodoLista.cpp.s
 .PHONY : src/structs/ListaEnlazada/NodoLista.cpp.s
+
+src/structs/Node.o: src/structs/Node.cpp.o
+.PHONY : src/structs/Node.o
+
+# target to build an object file
+src/structs/Node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Node.cpp.o
+.PHONY : src/structs/Node.cpp.o
+
+src/structs/Node.i: src/structs/Node.cpp.i
+.PHONY : src/structs/Node.i
+
+# target to preprocess a source file
+src/structs/Node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Node.cpp.i
+.PHONY : src/structs/Node.cpp.i
+
+src/structs/Node.s: src/structs/Node.cpp.s
+.PHONY : src/structs/Node.s
+
+# target to generate assembly for a file
+src/structs/Node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Node.cpp.s
+.PHONY : src/structs/Node.cpp.s
 
 src/structs/Pila/NodoPila.o: src/structs/Pila/NodoPila.cpp.o
 .PHONY : src/structs/Pila/NodoPila.o
@@ -441,6 +513,30 @@ src/structs/Pila/PilaMovimiento.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Pila/PilaMovimiento.cpp.s
 .PHONY : src/structs/Pila/PilaMovimiento.cpp.s
 
+src/structs/Stack.o: src/structs/Stack.cpp.o
+.PHONY : src/structs/Stack.o
+
+# target to build an object file
+src/structs/Stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Stack.cpp.o
+.PHONY : src/structs/Stack.cpp.o
+
+src/structs/Stack.i: src/structs/Stack.cpp.i
+.PHONY : src/structs/Stack.i
+
+# target to preprocess a source file
+src/structs/Stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Stack.cpp.i
+.PHONY : src/structs/Stack.cpp.i
+
+src/structs/Stack.s: src/structs/Stack.cpp.s
+.PHONY : src/structs/Stack.s
+
+# target to generate assembly for a file
+src/structs/Stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Stack.cpp.s
+.PHONY : src/structs/Stack.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -477,18 +573,30 @@ help:
 	@echo "... src/models/Tablero.o"
 	@echo "... src/models/Tablero.i"
 	@echo "... src/models/Tablero.s"
+	@echo "... src/structs/Cola.o"
+	@echo "... src/structs/Cola.i"
+	@echo "... src/structs/Cola.s"
+	@echo "... src/structs/LinkedList.o"
+	@echo "... src/structs/LinkedList.i"
+	@echo "... src/structs/LinkedList.s"
 	@echo "... src/structs/ListaEnlazada/ListaFichas.o"
 	@echo "... src/structs/ListaEnlazada/ListaFichas.i"
 	@echo "... src/structs/ListaEnlazada/ListaFichas.s"
 	@echo "... src/structs/ListaEnlazada/NodoLista.o"
 	@echo "... src/structs/ListaEnlazada/NodoLista.i"
 	@echo "... src/structs/ListaEnlazada/NodoLista.s"
+	@echo "... src/structs/Node.o"
+	@echo "... src/structs/Node.i"
+	@echo "... src/structs/Node.s"
 	@echo "... src/structs/Pila/NodoPila.o"
 	@echo "... src/structs/Pila/NodoPila.i"
 	@echo "... src/structs/Pila/NodoPila.s"
 	@echo "... src/structs/Pila/PilaMovimiento.o"
 	@echo "... src/structs/Pila/PilaMovimiento.i"
 	@echo "... src/structs/Pila/PilaMovimiento.s"
+	@echo "... src/structs/Stack.o"
+	@echo "... src/structs/Stack.i"
+	@echo "... src/structs/Stack.s"
 .PHONY : help
 
 

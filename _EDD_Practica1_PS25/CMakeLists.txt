@@ -28,4 +28,12 @@ add_executable(_EDD_Practica1_PS25 main.cpp
         src/controllers/ReportsController.cpp
         includes/controllers/FichasController.h
         src/controllers/FichasController.cpp
+        includes/structs/Node.h
+        src/structs/Node.cpp
+        includes/structs/LinkedList.h
+        src/structs/LinkedList.cpp
+        includes/structs/Cola.h
+        src/structs/Cola.cpp
+        includes/structs/Stack.h
+        src/structs/Stack.cpp
 )
