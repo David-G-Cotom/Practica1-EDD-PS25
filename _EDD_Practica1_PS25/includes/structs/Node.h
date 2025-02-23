@@ -14,13 +14,39 @@ private:
     Node *next;
 
 public:
-    Node(T *value);
+    Node(T *value) {
+        this->data = value;
+        this->next = nullptr;
+    }
 
-    T *getData();
-    void setData(T *value);
+    Node(T value) {
+        this->data = new T(value);
+        this->next = nullptr;
+    }
 
-    Node *getNext();
-    void setNext(Node *next);
+    T *getData() {
+        return this->data;
+    }
+
+    void setData(T *value) {
+        this->data = value;
+    }
+
+    Node *getNext() {
+        return this->next;
+    }
+
+    void setNext(Node *next) {
+        this->next = next;
+    }
+
+    T getValue() {
+        return *this->data;
+    }
+
+    void setValue(T value) {
+        this->data = new T(value);
+    }
 
 };
 

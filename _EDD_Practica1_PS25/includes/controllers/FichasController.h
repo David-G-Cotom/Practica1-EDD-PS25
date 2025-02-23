@@ -12,7 +12,7 @@
 
 class FichasController {
 
-    public:
+public:
     FichasController();
 
     LinkedList<Ficha> *crearFichasIniciales(LinkedList<std::string> *palabrasIniciales);

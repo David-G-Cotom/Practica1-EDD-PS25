@@ -15,16 +15,37 @@ private:
     Node<T> *raiz;
 
 public:
-    Stack();
+    Stack() {
+        this->raiz = nullptr;
+    }
 
-    Node<T> *getRaiz();
-    void setRaiz(Node<T> *raiz);
+    Node<T> *getRaiz() {
+        return this->raiz;
+    }
 
-    void push(T data);
+    void setRaiz(Node<T> *raiz) {
+        this->raiz = raiz;
+    }
 
-    T pop();
+    void push(T data) {
+        auto *nuevoNodo = new Node<T>(data);
+        nuevoNodo->setNext(this->raiz);
+        this->raiz = nuevoNodo;
+    }
 
-    bool isEmpty();
+    T *pop() {
+        if (this->raiz == nullptr) return nullptr;
+
+        Node<T> *aux = this->raiz;
+        T *data = this->raiz->getData();
+        this->raiz = this->raiz->getNext();
+        delete aux;
+        return data;
+    }
+
+    bool isEmpty() {
+        return this->raiz == nullptr;
+    }
 
 };
 

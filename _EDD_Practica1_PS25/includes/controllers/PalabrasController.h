@@ -15,7 +15,9 @@ public:
     PalabrasController();
 
     LinkedList<std::string> *cargarPalabras(std::string &nombreArchivo);
+
     void ordenarPalabras(LinkedList<std::string> *palabrasExtraidas);
+
     bool isPalabraValida(std::string &palabra, LinkedList<std::string> *palabraExtraidas);
 
 };

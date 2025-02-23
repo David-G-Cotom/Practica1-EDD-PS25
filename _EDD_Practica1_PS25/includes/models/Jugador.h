@@ -19,7 +19,6 @@ private:
     LinkedList<Ficha> *listaFichas;
 
 public:
-    Jugador();
     Jugador(std::string nombre);
 
     std::string getNombre();
@@ -37,6 +36,10 @@ public:
     void insertarFichaOrdenada(Node<Ficha> *ficha);
 
     void imprimirFichas();
+
+    //bool puedeFormarPalabra(std::string &palabra);
+
+    void usarFichas(std::string &palabra);
 
 };
 

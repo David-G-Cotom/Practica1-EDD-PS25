@@ -123,6 +123,6 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/structs/Pila/NodoPila.cpp.o: \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/ranges_util.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/structs/Pila/../../../includes/structs/Pila/../../models/../structs/ListaEnlazada/ListaFichas.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/structs/Pila/../../../includes/structs/Pila/../../models/../structs/ListaEnlazada/NodoLista.h \
- /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/structs/Pila/../../../includes/structs/Pila/../../models/../structs/ListaEnlazada/../../models/Ficha.h
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/structs/Pila/../../../includes/structs/Pila/../../models/../structs/LinkedList.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/structs/Pila/../../../includes/structs/Pila/../../models/../structs/Node.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/structs/Pila/../../../includes/structs/Pila/../../models/Ficha.h

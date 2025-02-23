@@ -16,19 +16,74 @@ private:
     Node<T> *fin;
 
 public:
-    Cola();
+    Cola() {
+        this->inicio = nullptr;
+        this->fin = nullptr;
+    }
 
-    Node<T> *getInicio();
-    void setInicio(Node<T> *inicio);
+    Node<T> *getInicio() {
+        return this->inicio;
+    }
 
-    Node<T> *getFin();
-    void setFin(Node<T> *fin);
+    void setInicio(Node<T> *inicio) {
+        this->inicio = inicio;
+    }
 
-    void encolar(T dato);
+    Node<T> *getFin() {
+        return this->fin;
+    }
 
-    T desencolar();
+    void setFin(Node<T> *fin) {
+        this->fin = fin;
+    }
 
-    bool isVacio();
+    void encolar(T *dato) {
+        auto *nuevoNodo = new Node<T>(dato);
+        if (this->fin == nullptr) {
+            this->inicio = this->fin = nuevoNodo;
+            return;
+        }
+        this->fin->setNext(nuevoNodo);
+        this->fin = nuevoNodo;
+    }
+
+    void encolar2(T dato) {
+        auto *nuevoNodo = new Node<T>(dato);
+        if (this->fin == nullptr) {
+            this->inicio = this->fin = nuevoNodo;
+            return;
+        }
+        this->fin->setNext(nuevoNodo);
+        this->fin = nuevoNodo;
+    }
+
+    T *desencolar() {
+        if (this->inicio == nullptr) return T();
+
+        Node<T> *aux = this->inicio;
+        T *dato = this->inicio->getDato();
+        this->inicio = this->inicio->getNext();
+        if (this->inicio == nullptr) this->fin = nullptr;
+
+        delete aux;
+        return dato;
+    }
+
+    T desencolar2() {
+        if (this->inicio == nullptr) return T();
+
+        Node<T> *aux = this->inicio;
+        T *dato = this->inicio->getData();
+        this->inicio = this->inicio->getNext();
+        if (this->inicio == nullptr) this->fin = nullptr;
+
+        delete aux;
+        return *dato;
+    }
+
+    bool isVacio() {
+        return this->inicio == nullptr;
+    }
 
 };
 

@@ -7,18 +7,18 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <filesystem>
 
 
-PalabrasController::PalabrasController() {
-
-}
+PalabrasController::PalabrasController() = default;
 
 LinkedList<std::string> *PalabrasController::cargarPalabras(std::string &nombreArchivo) {
     std::ifstream file(nombreArchivo);
-    if (!file) {
-        std::cout << "Error al abrir el archivo" << std::endl;
+    if (!file.is_open()) {
+        std::cerr << "Error al abrir el archivo en la ruta: " << nombreArchivo << std::endl;
         return nullptr;
     }
+    std::cout << "Archivo Cargado Correctamente" << std::endl;
     auto palabrasIniciales = new LinkedList<std::string>();
     std::string linea;
     while (std::getline(file, linea)) {
@@ -26,15 +26,16 @@ LinkedList<std::string> *PalabrasController::cargarPalabras(std::string &nombreA
         std::string palabra;
         while (std::getline(stream, palabra, ',')) {
             // Se eliminan los espacios en blanco (si hubieran) de cada palabra encontrada en la linea actual
-            size_t inicio = palabra.find_first_not_of(" \t");
-            size_t fin = palabra.find_last_not_of(" \t");
+            size_t inicio = palabra.find_first_not_of(" \t\r");
+            size_t fin = palabra.find_last_not_of(" \t\r");
             if (inicio != std::string::npos && fin != std::string::npos) {
                 palabra = palabra.substr(inicio, fin - inicio + 1);
             }
-            if (!palabra.empty()) palabrasIniciales->insertar(&palabra);
+            if (!palabra.empty()) palabrasIniciales->insertar(palabra);
         }
     }
     file.close();
+    std::cout << "Archivo Leido Correctamente" << std::endl;
     return palabrasIniciales;
 }
 
@@ -43,10 +44,10 @@ LinkedList<std::string> *PalabrasController::cargarPalabras(std::string &nombreA
 void PalabrasController::ordenarPalabras(LinkedList<std::string> *palabrasExtraidas) {
     for (int i = 0; i < palabrasExtraidas->getSize() - 1; i++) {
         for (int j = i + 1; j < palabrasExtraidas->getSize(); j++) {
-            if (palabrasExtraidas->getElement(i)->getData() > palabrasExtraidas->getElement(j)->getData()) {
-                std::string *aux = palabrasExtraidas->getElement(i)->getData();
-                palabrasExtraidas->getElement(i)->setData(palabrasExtraidas->getElement(j)->getData());
-                palabrasExtraidas->getElement(j)->setData(aux);
+            if (palabrasExtraidas->getElement(i)->getValue() > palabrasExtraidas->getElement(j)->getValue()) {
+                std::string aux = palabrasExtraidas->getElement(i)->getValue();
+                palabrasExtraidas->getElement(i)->setValue(palabrasExtraidas->getElement(j)->getValue());
+                palabrasExtraidas->getElement(j)->setValue(aux);
             }
         }
     }

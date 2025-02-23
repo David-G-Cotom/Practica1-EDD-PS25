@@ -39,17 +39,26 @@ void Tablero::bloquearCasillas() {
 void Tablero::imprimirTablero() {
     int filas = sizeof(this->tablero)/sizeof(this->tablero[0]);
     int columnas = sizeof(this->tablero[0])/sizeof(this->tablero[0][0]);
+    std::cout << "     1  2  3  4  5  6  7  8  9  10 11 12 13 14 15" << std::endl;
     for (int i = 0; i < filas; i++) {
+        if (i+1 < 10) std::cout << i + 1 << "  ";
+        else std::cout << i + 1 << " ";
+
         for (int j = 0; j < columnas; j++) {
-            std::cout << "|" << this->tablero[i][j];
+            std::cout << "||" << this->tablero[i][j];
         }
-        std::cout << "|" << std::endl;
+        std::cout << "||" << std::endl;
     }
 }
 
 bool Tablero::isCasillaValida(int x, int y) {
     return x >= 0 && x < SIZE && y >= 0 && y < SIZE && this->tablero[x][y] == this->SIMBOLO_CASILLA_LIBRE;
 }
+
+void Tablero::colocarLetra(int x, int y, char letra) {
+    this->tablero[x][y] = letra;
+}
+
 
 
 

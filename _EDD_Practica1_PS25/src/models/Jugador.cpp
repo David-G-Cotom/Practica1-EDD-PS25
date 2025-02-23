@@ -6,13 +6,6 @@
 
 #include <iostream>
 
-Jugador::Jugador() {
-    this->nombre = "";
-    this->puntos = 0;
-    this->movimientos = 0;
-    this->listaFichas = nullptr;
-}
-
 Jugador::Jugador(std::string nombre) {
     this->nombre = nombre;
     this->puntos = 0;
@@ -78,5 +71,36 @@ void Jugador::imprimirFichas() {
     }
     std::cout << std::endl;
 }
+
+/*bool Jugador::puedeFormarPalabra(std::string &palabra) {
+    LinkedList<char> aux;
+    for (char letra: palabra) {
+        bool encontrado = false;
+        for (int i = 0; i < this->listaFichas->getSize(); ++i) {
+            if (this->listaFichas->getElement(i)->getData()->getLetra() == letra) {
+                aux.insertar(&letra);
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado) return false;
+    }
+    return true;
+}*/
+
+void Jugador::usarFichas(std::string &palabra) {
+    for (char letra: palabra) {
+        Node<Ficha> *aux = this->listaFichas->getRaiz();
+        while (aux != nullptr) {
+            if (aux->getData()->getLetra() == letra) {
+                this->listaFichas->eliminar(aux->getData());
+                break;
+            }
+            aux = aux->getNext();
+        }
+    }
+}
+
+
 
 

@@ -5,6 +5,8 @@
 #ifndef GAMECONTROLLER_H
 #define GAMECONTROLLER_H
 
+#include "FichasController.h"
+#include "PalabrasController.h"
 #include "../models/Jugador.h"
 #include "../models/Tablero.h"
 #include "../structs/Cola.h"
@@ -24,6 +26,9 @@ private:
     long tiempoTotalTurno;
     int totalTurnos;
 
+    PalabrasController *palabrasController;
+    FichasController *fichasController;
+
 public:
     GameController();
 
@@ -32,6 +37,8 @@ public:
     void barajarTurnos();
 
     void jugar();
+
+    int calcularPuntuacion(std::string &palabra);
 
 };
 

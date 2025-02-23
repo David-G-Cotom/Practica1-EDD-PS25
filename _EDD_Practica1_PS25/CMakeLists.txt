@@ -6,18 +6,10 @@ set(CMAKE_CXX_STANDARD 23)
 add_executable(_EDD_Practica1_PS25 main.cpp
         includes/models/Ficha.h
         src/models/Ficha.cpp
-        includes/structs/ListaEnlazada/ListaFichas.h
-        includes/structs/ListaEnlazada/NodoLista.h
-        src/structs/ListaEnlazada/NodoLista.cpp
-        src/structs/ListaEnlazada/ListaFichas.cpp
         includes/models/Jugador.h
         src/models/Jugador.cpp
         includes/models/Movimiento.h
         src/models/Movimiento.cpp
-        includes/structs/Pila/PilaMovimiento.h
-        includes/structs/Pila/NodoPila.h
-        src/structs/Pila/PilaMovimiento.cpp
-        src/structs/Pila/NodoPila.cpp
         includes/models/Tablero.h
         src/models/Tablero.cpp
         includes/controllers/PalabrasController.h
@@ -29,11 +21,11 @@ add_executable(_EDD_Practica1_PS25 main.cpp
         includes/controllers/FichasController.h
         src/controllers/FichasController.cpp
         includes/structs/Node.h
-        src/structs/Node.cpp
         includes/structs/LinkedList.h
-        src/structs/LinkedList.cpp
         includes/structs/Cola.h
-        src/structs/Cola.cpp
         includes/structs/Stack.h
-        src/structs/Stack.cpp
+        includes/models/Posicion.h
+        src/models/Posicion.cpp
+        includes/Utils.h
+        src/Utils.cpp
 )
