@@ -77,24 +77,26 @@ public:
         this->size++;
     }
 
-    void eliminar(T *value) {
+    T *eliminar(T *value) {
         Node<T> *aux = this->raiz;
         Node<T> *previo = nullptr;
         while (aux != nullptr && aux->getData() != value) {
             previo = aux;
             aux = aux->getNext();
         }
-        if (aux == nullptr) return;
+        if (aux == nullptr) return nullptr;
 
         if (previo != nullptr) {
             previo->setNext(aux->getNext());
         } else {
             this->raiz = aux->getNext();
         }
-        delete aux;
+        aux->setNext(nullptr);
+        this->size--;
+        return aux->getData();
     }
 
-    Node<T> *eliminarFicha(int index) {
+    Node<T> *eliminar(int index) {
         Node<T> *aux = this->raiz;
         Node<T> *previo = nullptr;
         for (int i = 0; i < index; i++) {
@@ -107,6 +109,7 @@ public:
             this->raiz = aux->getNext();
         }
         aux->setNext(nullptr);
+        this->size--;
         return aux;
     }
 

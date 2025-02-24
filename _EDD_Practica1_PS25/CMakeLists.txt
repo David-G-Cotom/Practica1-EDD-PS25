@@ -24,8 +24,8 @@ add_executable(_EDD_Practica1_PS25 main.cpp
         includes/structs/LinkedList.h
         includes/structs/Cola.h
         includes/structs/Stack.h
-        includes/models/Posicion.h
-        src/models/Posicion.cpp
         includes/Utils.h
         src/Utils.cpp
+        includes/models/Casilla.h
+        src/models/Casilla.cpp
 )

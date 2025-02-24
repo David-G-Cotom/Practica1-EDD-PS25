@@ -273,6 +273,30 @@ src/controllers/ReportsController.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.s
 .PHONY : src/controllers/ReportsController.cpp.s
 
+src/models/Casilla.o: src/models/Casilla.cpp.o
+.PHONY : src/models/Casilla.o
+
+# target to build an object file
+src/models/Casilla.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Casilla.cpp.o
+.PHONY : src/models/Casilla.cpp.o
+
+src/models/Casilla.i: src/models/Casilla.cpp.i
+.PHONY : src/models/Casilla.i
+
+# target to preprocess a source file
+src/models/Casilla.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Casilla.cpp.i
+.PHONY : src/models/Casilla.cpp.i
+
+src/models/Casilla.s: src/models/Casilla.cpp.s
+.PHONY : src/models/Casilla.s
+
+# target to generate assembly for a file
+src/models/Casilla.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Casilla.cpp.s
+.PHONY : src/models/Casilla.cpp.s
+
 src/models/Ficha.o: src/models/Ficha.cpp.o
 .PHONY : src/models/Ficha.o
 
@@ -345,30 +369,6 @@ src/models/Movimiento.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.s
 .PHONY : src/models/Movimiento.cpp.s
 
-src/models/Posicion.o: src/models/Posicion.cpp.o
-.PHONY : src/models/Posicion.o
-
-# target to build an object file
-src/models/Posicion.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Posicion.cpp.o
-.PHONY : src/models/Posicion.cpp.o
-
-src/models/Posicion.i: src/models/Posicion.cpp.i
-.PHONY : src/models/Posicion.i
-
-# target to preprocess a source file
-src/models/Posicion.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Posicion.cpp.i
-.PHONY : src/models/Posicion.cpp.i
-
-src/models/Posicion.s: src/models/Posicion.cpp.s
-.PHONY : src/models/Posicion.s
-
-# target to generate assembly for a file
-src/models/Posicion.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Posicion.cpp.s
-.PHONY : src/models/Posicion.cpp.s
-
 src/models/Tablero.o: src/models/Tablero.cpp.o
 .PHONY : src/models/Tablero.o
 
@@ -420,6 +420,9 @@ help:
 	@echo "... src/controllers/ReportsController.o"
 	@echo "... src/controllers/ReportsController.i"
 	@echo "... src/controllers/ReportsController.s"
+	@echo "... src/models/Casilla.o"
+	@echo "... src/models/Casilla.i"
+	@echo "... src/models/Casilla.s"
 	@echo "... src/models/Ficha.o"
 	@echo "... src/models/Ficha.i"
 	@echo "... src/models/Ficha.s"
@@ -429,9 +432,6 @@ help:
 	@echo "... src/models/Movimiento.o"
 	@echo "... src/models/Movimiento.i"
 	@echo "... src/models/Movimiento.s"
-	@echo "... src/models/Posicion.o"
-	@echo "... src/models/Posicion.i"
-	@echo "... src/models/Posicion.s"
 	@echo "... src/models/Tablero.o"
 	@echo "... src/models/Tablero.i"
 	@echo "... src/models/Tablero.s"

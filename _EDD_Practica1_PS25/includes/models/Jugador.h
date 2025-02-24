@@ -37,9 +37,7 @@ public:
 
     void imprimirFichas();
 
-    //bool puedeFormarPalabra(std::string &palabra);
-
-    void usarFichas(std::string &palabra);
+    Ficha *usarFichas(char letra);
 
 };
 

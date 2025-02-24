@@ -4,6 +4,7 @@
 CMakeFiles/_EDD_Practica1_PS25.dir/main.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/main.cpp \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/LinkedList.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/Node.h \
+  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Jugador.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Tablero.h \
@@ -563,6 +564,7 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.o: /mnt/e/
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/Utils.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/LinkedList.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/Node.h \
+  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Jugador.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Tablero.h \
@@ -1063,6 +1065,11 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/PalabrasController.cpp.o: /mn
 CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/ReportsController.cpp \
   /usr/include/stdc-predef.h
 
+CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Casilla.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Casilla.cpp \
+  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h \
+  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h \
+  /usr/include/stdc-predef.h
+
 CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Ficha.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Ficha.cpp \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h \
   /usr/include/stdc-predef.h
@@ -1418,11 +1425,11 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.o: /mnt/e/Documento
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Posicion.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Posicion.cpp \
-  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Posicion.h \
-  /usr/include/stdc-predef.h
-
 CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Tablero.cpp \
+  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/LinkedList.h \
+  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/Node.h \
+  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h \
+  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h \
   /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Tablero.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -1619,15 +1626,13 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 
-/mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Tablero.cpp:
-
-/mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Posicion.h:
-
-/mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Posicion.cpp:
-
 /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Movimiento.h:
 
 /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Ficha.cpp:
+
+/mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Tablero.cpp:
+
+/mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Casilla.cpp:
 
 /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/ReportsController.cpp:
 
@@ -1645,7 +1650,7 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+/usr/include/libintl.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -1670,8 +1675,6 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
 /usr/include/c++/13/exception:
 
 /usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/libintl.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -1751,6 +1754,20 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
 
 /usr/include/c++/13/bits/stl_function.h:
 
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/c++/13/concepts:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/usr/include/c++/13/bits/uses_allocator.h:
+
+/usr/include/c++/13/bits/postypes.h:
+
+/usr/include/c++/13/iomanip:
+
 /usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
@@ -1763,21 +1780,7 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
 
 /usr/include/c++/13/cerrno:
 
-/usr/include/stdio.h:
-
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
-
-/usr/include/c++/13/initializer_list:
-
-/mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/controllers/PalabrasController.h:
-
-/usr/include/c++/13/bits/locale_facets_nonio.tcc:
-
-/usr/include/c++/13/bits/ptr_traits.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/Stack.h:
 
@@ -1819,8 +1822,6 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
 
 /usr/include/c++/13/bits/basic_string.tcc:
 
-/usr/include/c++/13/bits/cxxabi_forced.h:
-
 /usr/include/c++/13/iosfwd:
 
 /usr/include/c++/13/bits/ranges_cmp.h:
@@ -1835,15 +1836,29 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/usr/include/c++/13/concepts:
-
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
 /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/Node.h:
+
+/usr/include/c++/13/bits/cxxabi_forced.h:
+
+/usr/include/stdio.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/13/initializer_list:
+
+/mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/controllers/PalabrasController.h:
+
+/usr/include/c++/13/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/13/bits/ptr_traits.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
+
+/mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h:
+
+/usr/include/c++/13/array:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -1906,12 +1921,6 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
 /usr/include/time.h:
 
 /usr/include/c++/13/bits/fs_fwd.h:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/usr/include/c++/13/bits/uses_allocator.h:
-
-/usr/include/c++/13/iomanip:
 
 /usr/include/linux/errno.h:
 
@@ -2108,8 +2117,6 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: /mnt/e/Documentos\ 
 /usr/include/c++/13/ios:
 
 /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/GameController.cpp:
-
-/usr/include/c++/13/array:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 

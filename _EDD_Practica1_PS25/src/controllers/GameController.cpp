@@ -39,7 +39,7 @@ void GameController::cargarJugadores() {
 }
 
 void GameController::barajarTurnos() {
-    srand(time(NULL));
+    srand(time(nullptr));
     int cantidadIntercambios = this->jugadores->getSize() * 2;
     LinkedList<Jugador> *jugadoresAux = this->jugadores;
     for (int i = 0; i < cantidadIntercambios; i++) {
@@ -95,10 +95,6 @@ void GameController::jugar() {
     std::cout << "\nINICIANDO PARTIDA!!!" << std::endl;
     while (!this->turnos->isVacio()) {
         Jugador *jugadorActual = this->turnos->desencolar2();
-        if (jugadorActual->getListaFichas()->isEmpty()) {
-            std::cout << jugadorActual->getNombre() << " no Tiene Fichas, se Omite su Turno!!!" << std::endl;
-            continue;
-        }
         std::cout << "Turno de " << jugadorActual->getNombre() << " (Puntaje: " << jugadorActual->getPuntos() << ")" << std::endl;
         this->tablero->imprimirTablero();
         int opcion;
@@ -108,55 +104,41 @@ void GameController::jugar() {
             Utils::verificarEntradaNumerica(opcion, "Opcion: ");
             switch (opcion) {
                 case 1: {
-                    std::cout << "Tus Fichas son: ";
-                    jugadorActual->imprimirFichas();
-                    std::cout << "Ingrese la Letra de la Ficha: ";
-                    char letra;
-                    std::cin >> letra;
-                    letra = toupper(letra);
-                    /*
-                    if (!jugadorActual->puedeFormarPalabra(palabra)) {
-                        std::cout << "No tiene las Fichas Necesarias!!!" << std::endl;
-                        this->turnos->encolar(jugadorActual);
-                        continue;
-                    }
-                    if (!this->palabrasController->isPalabraValida(palabra, this->palabrasIniciales)) {
-                        std::cout << "Palabra No Valida!!!" << std::endl;
-                        this->turnos->encolar(jugadorActual);
-                        continue;
-                    }
-                    */
+                    Ficha *fichaUsada;
+                    do {
+                        std::cout << "Tus Fichas son: ";
+                        jugadorActual->imprimirFichas();
+                        std::cout << "Ingrese la Letra de la Ficha: ";
+                        char letra;
+                        std::cin.get(letra);
+                        letra = toupper(letra);
+                        fichaUsada = jugadorActual->usarFichas(letra);
+                        if (fichaUsada == nullptr) {
+                            std::cout << "Ficha con Letra " << letra << " No Encontrada!!!" << std::endl;
+                        }
+                    } while (fichaUsada == nullptr);
                     bool isPosicionCorrecta;
                     int x;
                     int y;
                     do {
                         isPosicionCorrecta = true;
-                        std::cout << "Ingrese la Posicion en X: ";
-                        std::cin >> x;
-                        std::cout << "Ingrese la Posicion en Y: ";
-                        std::cin >> y;
-                        if (!this->tablero->isCasillaValida(x, y)) {
+                        Utils::verificarEntradaNumerica(x, "Ingrese la Posicion en X: ");
+                        Utils::verificarEntradaNumerica(y, "Ingrese la Posicion en Y: ");
+                        if (!this->tablero->isCasillaValida(x - 1, y - 1)) {
                             std::cout << "Posicion Invalida o Bloqueda!!!" << std::endl;
-                            std::cout << "Intente de Nuevo" << std::endl;
                             isPosicionCorrecta = false;
                         }
                     } while (!isPosicionCorrecta);
-                    //REGISTRAR LA POSICION DE LA LETRA
-                    //QUITARLE LA LETRA AL JUGADOR
-                    this->tablero->colocarLetra(x, y, letra);
-
-                    //HACER LO PLATICADO EN LA U
-                    //en el tablero buscar las posiciones en x o y que coinsiden en el registroanterior
-                    //extraer la palabra
-                    //validarla en el diccionario
-                    /*
-                    int puntos = this->calcularPuntuacion(palabra);
-                    jugadorActual->setPuntos(jugadorActual->getPuntos() + puntos);
-                    jugadorActual->usarFichas(palabra);
-                    this->historialPalabrasEncontradas->push(palabra);
-                    std::cout << "Palabra Colocada!!! " << puntos << " puntos" << std::endl;
-                    */
+                    this->tablero->colocarFicha(x - 1, y - 1, fichaUsada);
                     this->tablero->imprimirTablero();
+                    //El tablero buscara las posiciones en x & y que coinsiden en el registroanterior
+                    //Devolvera una lista de las casillas tando horizontales como verticales
+                    LinkedList<Casilla*> *casillasVerticales = this->tablero->buscarCasillasVerticales(x - 1, y - 1);
+                    LinkedList<Casilla*> *casillasHorizontales = this->tablero->buscarCasillasHorizontales(x - 1, y - 1);
+                    //extraer las palabras y sus reversas
+                    //validarla en el diccionario
+                    this->verificarPalabra(casillasVerticales, jugadorActual);
+                    this->verificarPalabra(casillasHorizontales, jugadorActual);
                     int opcion2;
                     do {
                         std::cout << "¿Deshacer Ultima Jugada?\n1. SI\n2. NO" << std::endl;
@@ -180,6 +162,7 @@ void GameController::jugar() {
                             }
                         }
                     } while (opcion != 1 && opcion != 2);
+                    jugadorActual->setMovimientos(jugadorActual->getMovimientos() + 1);
                     break;
                 }
                 case 2: {
@@ -196,27 +179,66 @@ void GameController::jugar() {
         auto tiempoTurno = std::chrono::duration_cast<std::chrono::milliseconds>(finTiempo - inicioTiempo).count();
         this->tiempoTotalTurno += tiempoTurno;
         this->totalTurnos++;
-        if (!jugadorActual->getListaFichas()->isEmpty()) {
-            this->turnos->encolar(&jugadorActual);
+        if (jugadorActual->getListaFichas()->isEmpty()) {
+            std::cout << "El Jugador: " << jugadorActual->getNombre() << " No Tiene Fichas!!!" << std::endl;
+            break;
         }
+        if (this->tablero->isTableroLleno()) {
+            std::cout << "No se Pueden Formar mas Palabras!!!" << std::endl;
+            break;
+        }
+        this->turnos->encolar2(jugadorActual);
     }
-}
-
-int GameController::calcularPuntuacion(std::string &palabra) {
-    int total = 0;
-    for (char letra: palabra) {
-        for (int i = 0; i < this->jugadores->getSize(); ++i) {
-            Jugador *jugador = this->jugadores->getElement(i)->getData();
-            for (int j = 0; j < jugador->getListaFichas()->getSize(); ++j) {
-                Ficha *ficha = jugador->getListaFichas()->getElement(j)->getData();
-                if (ficha->getLetra() == letra) {
-                    total += ficha->getValor();
-                    break;
-                }
+    std::cout << "FIN DE PARTIDA!!!" << std::endl;
+    int opcion3;
+    do {
+        std::cout << "1. Ver Reportes\n2. Salir" << std::endl;
+        Utils::verificarEntradaNumerica(opcion3, "Opcion: ");
+        switch (opcion3) {
+            case 1: {
+                std::cout << "1. Historial de Plabras Jugadas" << std::endl;
+                std::cout << "2. Historial de Plabras No Encontradas" << std::endl;
+                std::cout << "3. Lista de Jugadores" << std::endl;
+                std::cout << "4. Resumen de Tiempo Promedio por Turno" << std::endl;
+                std::cout << "5. Cantidad de Movimientos por Jugador" << std::endl;
+                break;
+            }
+            case 2: {
+                std::cout << "JUEGO FINALIZADO!!!" << std::endl;
+                break;
+            }
+            default: {
+                std::cout << "Error!!! Opcion No Valida." << std::endl;
+                break;
             }
         }
+    } while (opcion3 != 1 && opcion3 != 2);
+}
+
+int GameController::calcularPuntuacion(LinkedList<Casilla*> *casillasPalabra) {
+    int total = 0;
+    Node<Casilla*> *casillaActual = casillasPalabra->getRaiz();
+    while (casillaActual != nullptr) {
+        total += casillaActual->getValue()->getFicha()->getValor();
+        casillaActual = casillaActual->getNext();
     }
     return total;
+}
+
+void GameController::verificarPalabra(LinkedList<Casilla*> *casillasEvaluar, Jugador *jugadorActual) {
+    std::string palabra;
+    auto *casillasVerificadas = new LinkedList<Casilla*>();
+    for (int i = 0; i < casillasEvaluar->getSize(); i++) {
+        Node<Casilla*> *casillaActual = casillasEvaluar->getElement(i);
+        palabra += casillaActual->getValue()->getFicha()->getLetra();
+        casillasVerificadas->insertar(casillaActual->getData());
+        if (this->palabrasController->isPalabraValida(palabra, this->palabrasIniciales)) {
+            int puntos = this->calcularPuntuacion(casillasVerificadas);
+            jugadorActual->setPuntos(jugadorActual->getPuntos() + puntos);
+            this->historialPalabrasEncontradas->push(palabra);
+            std::cout << "Puntos Obtenidos: " << puntos << " puntos" << std::endl;
+        }
+    }
 }
 
 

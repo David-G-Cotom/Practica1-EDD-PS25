@@ -56,7 +56,11 @@ void PalabrasController::ordenarPalabras(LinkedList<std::string> *palabrasExtrai
 bool PalabrasController::isPalabraValida(std::string &palabra, LinkedList<std::string> *palabraExtraidas) {
     Node<std::string> *aux = palabraExtraidas->getRaiz();
     while (aux != nullptr) {
-        if (*aux->getData() == palabra) return true;
+        if (*aux->getData() == palabra) {
+            std::cout << "Palabra " << palabra << " Encontrada!!!" << std::endl;
+            palabraExtraidas->eliminar(aux->getData());
+            return true;
+        }
         aux = aux->getNext();
     }
     return false;

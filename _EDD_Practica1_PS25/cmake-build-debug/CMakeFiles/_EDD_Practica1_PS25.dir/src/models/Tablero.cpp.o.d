@@ -2,6 +2,10 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o: \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Tablero.cpp \
  /usr/include/stdc-predef.h \
  /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/../../includes/models/Tablero.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/../../includes/models/Casilla.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/../../includes/models/Ficha.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/../../includes/models/../structs/LinkedList.h \
+ /mnt/e/Documentos\ Carlos\ Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/../../includes/models/../structs/Node.h \
  /usr/include/c++/13/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

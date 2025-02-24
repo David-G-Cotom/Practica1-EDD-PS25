@@ -38,7 +38,9 @@ public:
 
     void jugar();
 
-    int calcularPuntuacion(std::string &palabra);
+    int calcularPuntuacion(LinkedList<Casilla*> *casillasPalabra);
+
+    void verificarPalabra(LinkedList<Casilla*> *casillasEvaluar, Jugador *jugadorActual);
 
 };
 

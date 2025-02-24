@@ -14,6 +14,8 @@ class Utils {
 public:
     static void verificarEntradaNumerica(int &valorAsignado, std::string textoMostrar);
 
+    static std::string revertirString(std::string cadenaOriginal);
+
 };
 
 

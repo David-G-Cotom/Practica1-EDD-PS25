@@ -5,6 +5,8 @@
 #ifndef TABLERO_H
 #define TABLERO_H
 
+#include "Casilla.h"
+#include "../structs/LinkedList.h"
 
 
 class Tablero {
@@ -15,7 +17,7 @@ private:
     const char SIMBOLO_CASILLA_LIBRE = ' ';
     const char SIMBOLO_CASILLA_BLOQUEADA = '#';
 
-    char tablero[SIZE][SIZE];
+    Casilla *tablero[SIZE][SIZE];
 
     void inicializarTablero();
     void bloquearCasillas();
@@ -27,7 +29,13 @@ public:
 
     bool isCasillaValida(int x, int y);
 
-    void colocarLetra(int x, int y, char letra);
+    void colocarFicha(int x, int y, Ficha *ficha);
+
+    LinkedList<Casilla*> *buscarCasillasVerticales(int x, int y);
+
+    LinkedList<Casilla*> *buscarCasillasHorizontales(int x, int y);
+
+    bool isTableroLleno();
 
 };
 

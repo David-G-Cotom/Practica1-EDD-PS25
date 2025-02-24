@@ -5,6 +5,7 @@ CMakeFiles/_EDD_Practica1_PS25.dir/main.cpp.o
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/main.cpp
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/LinkedList.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/Node.h
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Jugador.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Tablero.h
@@ -567,6 +568,7 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/GameController.cpp.o
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/Utils.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/LinkedList.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/Node.h
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Jugador.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Tablero.h
@@ -1069,6 +1071,12 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/controllers/ReportsController.cpp.o
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/controllers/ReportsController.cpp
  /usr/include/stdc-predef.h
 
+CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Casilla.cpp.o
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Casilla.cpp
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h
+ /usr/include/stdc-predef.h
+
 CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Ficha.cpp.o
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Ficha.cpp
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h
@@ -1427,13 +1435,12 @@ CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.o
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Posicion.cpp.o
- /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Posicion.cpp
- /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Posicion.h
- /usr/include/stdc-predef.h
-
 CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Tablero.cpp
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/LinkedList.h
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/structs/Node.h
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Casilla.h
+ /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Ficha.h
  /mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/includes/models/Tablero.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h

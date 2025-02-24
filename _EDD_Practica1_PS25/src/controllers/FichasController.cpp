@@ -12,7 +12,7 @@ FichasController::FichasController() = default;
 // Crea la lista de fichas inicial a partir de las letras de las palabras cargadas
 // A cada letra se le asigna un valor aleatorio entre 1 y 10.
 LinkedList<Ficha> *FichasController::crearFichasIniciales(LinkedList<std::string> *palabrasIniciales) {
-    srand(time(NULL));
+    srand(time(nullptr));
     std::cout << "Creando Fichas para el Juego" << std::endl;
     auto *listaGeneralFichas = new LinkedList<Ficha>();
     for (int i = 0; i < palabrasIniciales->getSize(); i++) {
@@ -31,7 +31,7 @@ LinkedList<Ficha> *FichasController::crearFichasIniciales(LinkedList<std::string
 
 // Reparte todas las fichas a cada jugador de manera aleatoria.
 void FichasController::distribuirFichas(LinkedList<Ficha> *listaGeneralFichas, LinkedList<Jugador> *jugadores) {
-    srand(time(NULL));
+    srand(time(nullptr));
     int cantidadFichas = listaGeneralFichas->getSize();
     std::cout << "Cantidad Fichas: " << cantidadFichas << std::endl;
     int cantidadJugadores = jugadores->getSize();
@@ -39,8 +39,7 @@ void FichasController::distribuirFichas(LinkedList<Ficha> *listaGeneralFichas, L
     if (fichasFaltantes != 0) {
         fichasFaltantes = cantidadJugadores - fichasFaltantes;
         for (int i = 0; i < fichasFaltantes; i++) {
-            int valorASCII = (rand() % 26 + 1) + 64;    //LETRAS MAYUSCULAS
-            char letra = valorASCII;
+            char letra = (rand() % 26 + 1) + 64;    //LETRAS MAYUSCULAS
             int valor = rand() % 10 + 1;
             auto *nuevaFicha = new Ficha(letra, valor);
             listaGeneralFichas->insertar(nuevaFicha);
@@ -55,7 +54,7 @@ void FichasController::distribuirFichas(LinkedList<Ficha> *listaGeneralFichas, L
             if (cantidadFichas == 0) break;
 
             int index = rand() % cantidadFichas;
-            Node<Ficha> *fichaSeleccionada = listaGeneralFichas->eliminarFicha(index);
+            Node<Ficha> *fichaSeleccionada = listaGeneralFichas->eliminar(index);
             jugadores->getElement(i)->getData()->insertarFichaOrdenada(fichaSeleccionada);
             cantidadFichas--;
         }
