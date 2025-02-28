@@ -33,7 +33,11 @@ public:
 
     LinkedList<Casilla*> *buscarCasillasVerticales(int x, int y);
 
+    LinkedList<Casilla*> *buscarCasillasVerticalesSiguientes(int x, int y);
+
     LinkedList<Casilla*> *buscarCasillasHorizontales(int x, int y);
+
+    LinkedList<Casilla*> *buscarCasillasHorizontalesSiguientes(int x, int y);
 
     bool isTableroLleno();
 

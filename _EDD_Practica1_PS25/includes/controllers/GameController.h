@@ -7,6 +7,7 @@
 
 #include "FichasController.h"
 #include "PalabrasController.h"
+#include "ReportsController.h"
 #include "../models/Jugador.h"
 #include "../models/Tablero.h"
 #include "../structs/Cola.h"
@@ -20,7 +21,6 @@ private:
     LinkedList<Jugador> *jugadores;
     Cola<Jugador*> *turnos;
     Stack<std::string> *historialPalabrasEncontradas;
-    LinkedList<std::string> *palabrasNoEncontradas;
     LinkedList<std::string> *palabrasIniciales;
     Tablero *tablero;
     long tiempoTotalTurno;
@@ -28,6 +28,7 @@ private:
 
     PalabrasController *palabrasController;
     FichasController *fichasController;
+    ReportsController *reportsController;
 
 public:
     GameController();
@@ -41,6 +42,8 @@ public:
     int calcularPuntuacion(LinkedList<Casilla*> *casillasPalabra);
 
     void verificarPalabra(LinkedList<Casilla*> *casillasEvaluar, Jugador *jugadorActual);
+
+    void reportes();
 
 };
 

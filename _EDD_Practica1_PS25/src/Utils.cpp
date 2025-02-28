@@ -23,11 +23,3 @@ void Utils::verificarEntradaNumerica(int &valorAsignado, const std::string texto
         }
     }
 }
-
-std::string Utils::revertirString(std::string cadenaOriginal) {
-    if (cadenaOriginal.length() <= 1) {
-        return cadenaOriginal;
-    }
-    return revertirString(cadenaOriginal.substr(1)) + cadenaOriginal[0];
-}
-

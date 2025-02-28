@@ -14,13 +14,13 @@ GameController::GameController() {
     this->jugadores = new LinkedList<Jugador>;
     this->turnos = new Cola<Jugador*>;
     this->historialPalabrasEncontradas = new Stack<std::string>;
-    this->palabrasNoEncontradas = new LinkedList<std::string>;
     this->palabrasIniciales = new LinkedList<std::string>;
     this->tablero = new Tablero();
     this->tiempoTotalTurno = 0;
     this->totalTurnos = 0;
     this->palabrasController = new PalabrasController();
     this->fichasController = new FichasController();
+    this->reportsController = new ReportsController();
 }
 
 void GameController::cargarJugadores() {
@@ -135,10 +135,13 @@ void GameController::jugar() {
                     //Devolvera una lista de las casillas tando horizontales como verticales
                     LinkedList<Casilla*> *casillasVerticales = this->tablero->buscarCasillasVerticales(x - 1, y - 1);
                     LinkedList<Casilla*> *casillasHorizontales = this->tablero->buscarCasillasHorizontales(x - 1, y - 1);
-                    //extraer las palabras y sus reversas
-                    //validarla en el diccionario
+                    LinkedList<Casilla*> *casillasVerticalesSiguientes = this->tablero->buscarCasillasVerticalesSiguientes(x - 1, y - 1);
+                    LinkedList<Casilla*> *casillasHorizontalesSiguientes = this->tablero->buscarCasillasHorizontalesSiguientes(x - 1, y - 1);
+                    //extraer las palabras y validarla en el diccionario
                     this->verificarPalabra(casillasVerticales, jugadorActual);
                     this->verificarPalabra(casillasHorizontales, jugadorActual);
+                    this->verificarPalabra(casillasVerticalesSiguientes, jugadorActual);
+                    this->verificarPalabra(casillasHorizontalesSiguientes, jugadorActual);
                     int opcion2;
                     do {
                         std::cout << "¿Deshacer Ultima Jugada?\n1. SI\n2. NO" << std::endl;
@@ -196,11 +199,7 @@ void GameController::jugar() {
         Utils::verificarEntradaNumerica(opcion3, "Opcion: ");
         switch (opcion3) {
             case 1: {
-                std::cout << "1. Historial de Plabras Jugadas" << std::endl;
-                std::cout << "2. Historial de Plabras No Encontradas" << std::endl;
-                std::cout << "3. Lista de Jugadores" << std::endl;
-                std::cout << "4. Resumen de Tiempo Promedio por Turno" << std::endl;
-                std::cout << "5. Cantidad de Movimientos por Jugador" << std::endl;
+                this->reportes();
                 break;
             }
             case 2: {
@@ -239,6 +238,59 @@ void GameController::verificarPalabra(LinkedList<Casilla*> *casillasEvaluar, Jug
             std::cout << "Puntos Obtenidos: " << puntos << " puntos" << std::endl;
         }
     }
+}
+
+void GameController::reportes() {
+    int opcionReportes;
+    do {
+        std::cout << "1. Historial de Plabras Jugadas" << std::endl;
+        std::cout << "2. Historial de Plabras No Encontradas" << std::endl;
+        std::cout << "3. Lista de Jugadores" << std::endl;
+        std::cout << "4. Resumen de Tiempo Promedio por Turno" << std::endl;
+        std::cout << "5. Cantidad de Movimientos por Jugador" << std::endl;
+        std::cout << "6. Salir" << std::endl;
+        Utils::verificarEntradaNumerica(opcionReportes, "Opcion: ");
+        switch (opcionReportes) {
+            case 1: {
+                this->reportsController->historialPalabrasJugadas(this->historialPalabrasEncontradas);
+                break;
+            }
+            case 2: {
+                this->reportsController->historialPalabrasNoEncontradas(this->palabrasIniciales);
+                break;
+            }
+            case 3: {
+                int opcionOrden;
+                do {
+                    std::cout << "1. Ordenada por Puntaje" << std::endl;
+                    std::cout << "2. Ordenada por Nombre" << std::endl;
+                    Utils::verificarEntradaNumerica(opcionOrden, "Opcion: ");
+                    if (opcionOrden == 1) {
+                        this->reportsController->jugadoresOrdenadoPuntaje(this->jugadores);
+                    } else if (opcionOrden == 2) {
+                        this->reportsController->jugadoresOrdenadoNombre(this->jugadores);
+                    }
+                } while (opcionOrden != 1 && opcionOrden != 2);
+                break;
+            }
+            case 4: {
+                this->reportsController->tiempoPromedioTurno(this->tiempoTotalTurno, this->totalTurnos);
+                break;
+            }
+            case 5: {
+                this->reportsController->movimientoPorJugador(this->jugadores);
+                break;
+            }
+            case 6: {
+                std::cout << "SALIENDO DEL JUEGO!!!" << std::endl;
+                break;
+            }
+            default: {
+                std::cout << "Error!!! Opcion No Valida." << std::endl;
+                break;
+            }
+        }
+    } while (opcionReportes != 6);
 }
 
 
