@@ -13,6 +13,10 @@ Jugador::Jugador(std::string nombre) {
     this->listaFichas = new LinkedList<Ficha>;
 }
 
+Jugador::~Jugador() {
+    delete this->listaFichas;
+}
+
 std::string Jugador::getNombre() {
     return this->nombre;
 }

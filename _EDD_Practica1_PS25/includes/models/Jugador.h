@@ -21,6 +21,8 @@ private:
 public:
     Jugador(std::string nombre);
 
+    ~Jugador();
+
     std::string getNombre();
     void setNombre(std::string nombre);
 

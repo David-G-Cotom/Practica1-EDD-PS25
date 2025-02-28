@@ -24,6 +24,11 @@ public:
         this->next = nullptr;
     }
 
+    ~Node() {
+        delete data;
+        delete next;
+    }
+
     T *getData() {
         return this->data;
     }

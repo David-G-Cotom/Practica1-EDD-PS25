@@ -14,6 +14,8 @@ class ReportsController {
 public:
     ReportsController();
 
+    ~ReportsController();
+
     void historialPalabrasJugadas(Stack<std::string> *palabrasEncontradas);
 
     void historialPalabrasNoEncontradas(LinkedList<std::string> *palabrasNoEncontradas);

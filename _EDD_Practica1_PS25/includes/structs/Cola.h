@@ -21,6 +21,17 @@ public:
         this->fin = nullptr;
     }
 
+    ~Cola() {
+        Node<T> *aux = this->inicio;
+        while (aux != nullptr) {    // O(n), donde n es el número de nodos en la cola
+            Node<T> *siguiente = aux->getNext();
+            delete aux;
+            aux = siguiente;
+        }
+        this->inicio = nullptr;
+        this->fin = nullptr;
+    }
+
     Node<T> *getInicio() {
         return this->inicio;
     }

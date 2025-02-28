@@ -7,6 +7,7 @@ int main() {
     // <b>lang</b> variable name to see how CLion can help you rename it.
     auto *game = new GameController();
     game->jugar();
+    delete game;
 
     return 0;
 }

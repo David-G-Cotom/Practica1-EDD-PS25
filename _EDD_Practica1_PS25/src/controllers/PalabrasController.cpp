@@ -13,6 +13,8 @@
 
 PalabrasController::PalabrasController() = default;
 
+PalabrasController::~PalabrasController() = default;
+
 LinkedList<std::string> *PalabrasController::cargarPalabras(std::string &nombreArchivo) {
     std::ifstream file(nombreArchivo);
     if (!file.is_open()) {

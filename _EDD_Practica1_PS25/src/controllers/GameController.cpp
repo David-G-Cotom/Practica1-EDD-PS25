@@ -23,6 +23,17 @@ GameController::GameController() {
     this->reportsController = new ReportsController();
 }
 
+GameController::~GameController() {
+    delete this->jugadores;
+    delete this->turnos;
+    delete this->historialPalabrasEncontradas;
+    delete this->palabrasIniciales;
+    delete this->tablero;
+    delete this->palabrasController;
+    delete this->fichasController;
+    delete this->reportsController;
+}
+
 void GameController::cargarJugadores() {
     int cantidadJugadores;
     Utils::verificarEntradaNumerica(cantidadJugadores, "Ingrese el Numero de Jugadores (Minimo 2. Maximo 5): ");
@@ -174,6 +185,20 @@ void GameController::jugar() {
         this->turnos->encolar2(jugadorActual);
     }
     std::cout << "FIN DE PARTIDA!!!" << std::endl;
+    std::cout << "Resultados de la Partida";
+    int opcionOrden;
+    do {
+        std::cout << "1. Ordenada por Puntaje" << std::endl;
+        std::cout << "2. Ordenada por Nombre" << std::endl;
+        Utils::verificarEntradaNumerica(opcionOrden, "Opcion: ");
+        if (opcionOrden == 1) {
+            std::cout << "--- Resultados de la Partida Ordenados por Puntaje ---" << std::endl;
+            this->reportsController->jugadoresOrdenadoPuntaje(this->jugadores);
+        } else if (opcionOrden == 2) {
+            std::cout << "--- Resultados de la Partida Ordenados por Nombre ---" << std::endl;
+            this->reportsController->jugadoresOrdenadoNombre(this->jugadores);
+        }
+    } while (opcionOrden != 1 && opcionOrden != 2);
     int opcion3;
     do {
         std::cout << "1. Ver Reportes\n2. Salir" << std::endl;
@@ -247,8 +272,10 @@ void GameController::reportes() {
                     std::cout << "2. Ordenada por Nombre" << std::endl;
                     Utils::verificarEntradaNumerica(opcionOrden, "Opcion: ");
                     if (opcionOrden == 1) {
+                        std::cout << "--- Lista de Jugadores Ordenada por Puntaje ---" << std::endl;
                         this->reportsController->jugadoresOrdenadoPuntaje(this->jugadores);
                     } else if (opcionOrden == 2) {
+                        std::cout << "--- Lista de Jugadores Ordenada por Nombre ---" << std::endl;
                         this->reportsController->jugadoresOrdenadoNombre(this->jugadores);
                     }
                 } while (opcionOrden != 1 && opcionOrden != 2);

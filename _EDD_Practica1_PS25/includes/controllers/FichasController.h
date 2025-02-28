@@ -15,6 +15,8 @@ class FichasController {
 public:
     FichasController();
 
+    ~FichasController();
+
     LinkedList<Ficha> *crearFichasIniciales(LinkedList<std::string> *palabrasIniciales);
 
     void distribuirFichas(LinkedList<Ficha> *listaGeneralFichas, LinkedList<Jugador> *jugadores);

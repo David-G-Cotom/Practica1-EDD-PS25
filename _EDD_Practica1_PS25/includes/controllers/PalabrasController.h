@@ -14,6 +14,8 @@ class PalabrasController {
 public:
     PalabrasController();
 
+    ~PalabrasController();
+
     LinkedList<std::string> *cargarPalabras(std::string &nombreArchivo);
 
     void ordenarPalabras(LinkedList<std::string> *palabrasExtraidas);

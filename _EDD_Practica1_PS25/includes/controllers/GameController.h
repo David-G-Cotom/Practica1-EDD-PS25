@@ -43,6 +43,8 @@ private:
 public:
     GameController();
 
+    ~GameController();
+
     void jugar();
 
 };

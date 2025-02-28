@@ -9,6 +9,10 @@ Casilla::Casilla(Ficha *ficha, bool isHabilitada) {
     this->isHabilitada = isHabilitada;
 }
 
+Casilla::~Casilla() {
+    delete this->ficha;
+}
+
 Ficha *Casilla::getFicha() {
     return this->ficha;
 }

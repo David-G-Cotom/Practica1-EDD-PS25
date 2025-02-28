@@ -9,6 +9,8 @@
 
 ReportsController::ReportsController() = default;
 
+ReportsController::~ReportsController() = default;
+
 void ReportsController::historialPalabrasJugadas(Stack<std::string> *palabrasEncontradas) {
     Node<std::string> *aux = palabrasEncontradas->getRaiz();
     std::cout << "--- Historial de Palabras Jugadas ---" << std::endl;
@@ -31,7 +33,6 @@ void ReportsController::historialPalabrasNoEncontradas(LinkedList<std::string> *
 // Complejidad: O(n^2)
 void ReportsController::jugadoresOrdenadoPuntaje(LinkedList<Jugador> *jugadores) {
     LinkedList<Jugador> *aux = jugadores;
-    std::cout << "--- Lista de Jugadores Ordenada por Puntaje ---" << std::endl;
     for (int i = 0; i < jugadores->getSize() - 1; i++) {
         for (int j = i + 1; j < jugadores->getSize(); j++) {
             if (aux->getElement(i)->getData()->getPuntos() > aux->getElement(j)->getData()->getPuntos()) {
@@ -54,7 +55,6 @@ void ReportsController::jugadoresOrdenadoPuntaje(LinkedList<Jugador> *jugadores)
 // Complejidad: O(n^2)
 void ReportsController::jugadoresOrdenadoNombre(LinkedList<Jugador> *jugadores) {
     LinkedList<Jugador> *aux = jugadores;
-    std::cout << "--- Lista de Jugadores Ordenada por Nombre ---" << std::endl;
     for (int i = 0; i < jugadores->getSize() - 1; i++) {
         for (int j = i + 1; j < jugadores->getSize(); j++) {
             if (aux->getElement(i)->getData()->getNombre() > aux->getElement(j)->getData()->getNombre()) {
@@ -67,7 +67,7 @@ void ReportsController::jugadoresOrdenadoNombre(LinkedList<Jugador> *jugadores) 
     Node<Jugador> *nodoAux = aux->getRaiz();
     int i = 1;
     while (nodoAux) {
-        std::cout << i << ". " << nodoAux->getData()->getNombre() << std::endl;
+        std::cout << i << ". " << nodoAux->getData()->getNombre() << " -> " << nodoAux->getData()->getPuntos() << " puntos" << std::endl;
         nodoAux = nodoAux->getNext();
         i++;
     }

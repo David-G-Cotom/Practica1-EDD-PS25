@@ -21,6 +21,15 @@ public:
         this->size = 0;
     }
 
+    ~LinkedList() {
+        while (this->raiz != nullptr) {
+            Node<T> *temp = this->raiz;
+            this->raiz = this->raiz->getNext();
+            delete temp;
+        }
+        this->raiz = 0;
+    }
+
     Node<T> *getRaiz() {
         return this->raiz;
     }
@@ -53,28 +62,28 @@ public:
         auto *nuevoNodo = new Node<T>(value);
         if (this->raiz == nullptr) {
             this->raiz = nuevoNodo;
-            this->size++;
+            ++this->size;
             return;
         }
         Node<T> *aux = this->raiz;
         while (aux->getNext() != nullptr) aux = aux->getNext();
 
         aux->setNext(nuevoNodo);
-        this->size++;
+        ++this->size;
     }
 
     void insertar(T value) {
         auto *nuevoNodo = new Node<T>(value);
         if (this->raiz == nullptr) {
             this->raiz = nuevoNodo;
-            this->size++;
+            ++this->size;
             return;
         }
         Node<T> *aux = this->raiz;
         while (aux->getNext() != nullptr) aux = aux->getNext();
 
         aux->setNext(nuevoNodo);
-        this->size++;
+        ++this->size;
     }
 
     T *eliminar(T *value) {
@@ -92,7 +101,7 @@ public:
             this->raiz = aux->getNext();
         }
         aux->setNext(nullptr);
-        this->size--;
+        --this->size;
         return aux->getData();
     }
 
@@ -109,7 +118,7 @@ public:
             this->raiz = aux->getNext();
         }
         aux->setNext(nullptr);
-        this->size--;
+        --this->size;
         return aux;
     }
 

@@ -19,6 +19,16 @@ public:
         this->raiz = nullptr;
     }
 
+    ~Stack() {
+        Node<T> *aux = this->raiz;
+        while (aux != nullptr) {
+            Node<T> *siguiente = aux->getNext();
+            delete aux;
+            aux = siguiente;
+        }
+        this->raiz = nullptr;
+    }
+
     Node<T> *getRaiz() {
         return this->raiz;
     }

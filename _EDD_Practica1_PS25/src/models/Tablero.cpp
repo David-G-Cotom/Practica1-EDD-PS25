@@ -11,6 +11,15 @@ Tablero::Tablero() {
     this->inicializarTablero();
 }
 
+Tablero::~Tablero() {   // O(n²)
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            delete tablero[i][j];
+            tablero[i][j] = nullptr;
+        }
+    }
+}
+
 void Tablero::inicializarTablero() {
     int filas = sizeof(this->tablero)/sizeof(this->tablero[0]);
     int columnas = sizeof(this->tablero[0])/sizeof(this->tablero[0][0]);

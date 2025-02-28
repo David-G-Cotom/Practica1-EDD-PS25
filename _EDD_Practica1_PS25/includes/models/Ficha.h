@@ -15,6 +15,8 @@ private:
 public:
     Ficha(char letra, int valor);
 
+    ~Ficha();
+
     char getLetra();
     void setLetra(char letra);
 

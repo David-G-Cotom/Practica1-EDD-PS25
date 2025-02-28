@@ -4,10 +4,12 @@
 
 #include "../../includes/models/Ficha.h"
 
-Ficha::Ficha(char letra, int valor) {
+Ficha::Ficha(char letra, const int valor) {
     this->letra = letra;
     this->valor = valor;
 }
+
+Ficha::~Ficha() = default;
 
 char Ficha::getLetra() {
     return this->letra;

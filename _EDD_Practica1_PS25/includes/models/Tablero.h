@@ -25,6 +25,8 @@ private:
 public:
     Tablero();
 
+    ~Tablero();
+
     void imprimirTablero();
 
     bool isCasillaValida(int x, int y);

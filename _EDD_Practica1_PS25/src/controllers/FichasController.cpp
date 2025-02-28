@@ -9,6 +9,8 @@
 
 FichasController::FichasController() = default;
 
+FichasController::~FichasController() = default;
+
 // Crea la lista de fichas inicial a partir de las letras de las palabras cargadas
 // A cada letra se le asigna un valor aleatorio entre 1 y 10.
 LinkedList<Ficha> *FichasController::crearFichasIniciales(LinkedList<std::string> *palabrasIniciales) {
