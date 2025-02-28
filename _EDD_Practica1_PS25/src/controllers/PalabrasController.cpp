@@ -3,6 +3,7 @@
 //
 
 #include "../../includes/controllers/PalabrasController.h"
+#include "../../includes/Utils.h"
 
 #include <fstream>
 #include <iostream>
@@ -51,12 +52,17 @@ void PalabrasController::ordenarPalabras(LinkedList<std::string> *palabrasExtrai
             }
         }
     }
+    std::cout << "Palabras Registradas:" << std::endl;
+    for (int i = 0; i < palabrasExtraidas->getSize(); ++i) {
+        std::cout << palabrasExtraidas->getElement(i)->getValue() << " - ";
+    }
+    std::cout << std::endl;
 }
 
 bool PalabrasController::isPalabraValida(std::string &palabra, LinkedList<std::string> *palabraExtraidas) {
     Node<std::string> *aux = palabraExtraidas->getRaiz();
     while (aux != nullptr) {
-        if (*aux->getData() == palabra) {
+        if (Utils::isEquals(aux->getValue(), palabra)) {
             std::cout << "Palabra " << palabra << " Encontrada!!!" << std::endl;
             palabraExtraidas->eliminar(aux->getData());
             return true;

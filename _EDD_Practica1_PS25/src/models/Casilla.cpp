@@ -4,11 +4,6 @@
 
 #include "../../includes/models/Casilla.h"
 
-Casilla::Casilla() {
-    this->ficha = nullptr;
-    this->isHabilitada = true;
-}
-
 Casilla::Casilla(Ficha *ficha, bool isHabilitada) {
     this->ficha = ficha;
     this->isHabilitada = isHabilitada;

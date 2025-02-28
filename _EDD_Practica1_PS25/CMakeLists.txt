@@ -8,8 +8,6 @@ add_executable(_EDD_Practica1_PS25 main.cpp
         src/models/Ficha.cpp
         includes/models/Jugador.h
         src/models/Jugador.cpp
-        includes/models/Movimiento.h
-        src/models/Movimiento.cpp
         includes/models/Tablero.h
         src/models/Tablero.cpp
         includes/controllers/PalabrasController.h

@@ -9,8 +9,8 @@
 
 ReportsController::ReportsController() = default;
 
-void ReportsController::historialPalabrasJugadas(Stack<std::string> *palabrasEencontradas) {
-    Node<std::string> *aux = palabrasEencontradas->getRaiz();
+void ReportsController::historialPalabrasJugadas(Stack<std::string> *palabrasEncontradas) {
+    Node<std::string> *aux = palabrasEncontradas->getRaiz();
     std::cout << "--- Historial de Palabras Jugadas ---" << std::endl;
     while (aux) {
         std::cout << aux->getData() << std::endl;

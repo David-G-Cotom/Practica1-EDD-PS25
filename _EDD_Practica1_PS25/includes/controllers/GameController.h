@@ -30,20 +30,20 @@ private:
     FichasController *fichasController;
     ReportsController *reportsController;
 
-public:
-    GameController();
-
     void cargarJugadores();
 
     void barajarTurnos();
-
-    void jugar();
 
     int calcularPuntuacion(LinkedList<Casilla*> *casillasPalabra);
 
     void verificarPalabra(LinkedList<Casilla*> *casillasEvaluar, Jugador *jugadorActual);
 
     void reportes();
+
+public:
+    GameController();
+
+    void jugar();
 
 };
 

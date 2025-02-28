@@ -39,6 +39,7 @@ void GameController::cargarJugadores() {
 }
 
 void GameController::barajarTurnos() {
+    std::cout << "Barajando turnos..." << std::endl;
     srand(time(nullptr));
     int cantidadIntercambios = this->jugadores->getSize() * 2;
     LinkedList<Jugador> *jugadoresAux = this->jugadores;
@@ -59,6 +60,7 @@ void GameController::barajarTurnos() {
         this->turnos->encolar2(aux->getData());
         aux = aux->getNext();
     }
+    std::cout << "Turnos Barajados Exitosamente!!!";
 }
 
 void GameController::jugar() {
@@ -66,37 +68,18 @@ void GameController::jugar() {
     std::cout << "Ingrese el Nombre del Archivo de palabras: ";
     getline(std::cin, nombreArchivo);
     this->palabrasIniciales = this->palabrasController->cargarPalabras(nombreArchivo);
-    /*for (int i = 0; i < this->palabrasIniciales->getSize(); ++i) {
-        std::cout << this->palabrasIniciales->getElement(i)->getValue() << std::endl;
-    }*/
     this->palabrasController->ordenarPalabras(this->palabrasIniciales);
-    /*for (int i = 0; i < this->palabrasIniciales->getSize(); ++i) {
-        std::cout << this->palabrasIniciales->getElement(i)->getValue() << std::endl;
-    }*/
     this->cargarJugadores();
     LinkedList<Ficha> *fichasPartida = this->fichasController->crearFichasIniciales(this->palabrasIniciales);
-    /*for (int i = 0; i < fichasPartida->getSize(); ++i) {
-        std::cout << fichasPartida->getElement(i)->getData()->getLetra() << std::endl;
-        std::cout << fichasPartida->getElement(i)->getData()->getValor() << std::endl;
-        std::cout << std::endl;
-    }*/
     this->fichasController->distribuirFichas(fichasPartida, this->jugadores);
-    /*for (int i = 0; i < this->jugadores->getSize(); ++i) {
-        std::cout << "Fichas jugador " << i + 1 << ": " << std::endl;
-        Jugador *aux = this->jugadores->getElement(i)->getData();
-        std::cout << "Jugador tiene " << aux->getListaFichas()->getSize() << " Fichas" << std::endl;
-        for (int j = 0; j < aux->getListaFichas()->getSize(); ++j) {
-            std::cout << aux->getListaFichas()->getElement(j)->getData()->getLetra() << std::endl;
-            std::cout << aux->getListaFichas()->getElement(j)->getData()->getValor() << std::endl;
-        }
-        std::cout << std::endl;
-    }*/
     this->barajarTurnos();
     std::cout << "\nINICIANDO PARTIDA!!!" << std::endl;
     while (!this->turnos->isVacio()) {
         Jugador *jugadorActual = this->turnos->desencolar2();
         std::cout << "Turno de " << jugadorActual->getNombre() << " (Puntaje: " << jugadorActual->getPuntos() << ")" << std::endl;
         this->tablero->imprimirTablero();
+        std::cout << "Tus Fichas son: ";
+        jugadorActual->imprimirFichas();
         int opcion;
         auto inicioTiempo = std::chrono::steady_clock::now();
         do {
@@ -106,8 +89,6 @@ void GameController::jugar() {
                 case 1: {
                     Ficha *fichaUsada;
                     do {
-                        std::cout << "Tus Fichas son: ";
-                        jugadorActual->imprimirFichas();
                         std::cout << "Ingrese la Letra de la Ficha: ";
                         char letra;
                         std::cin.get(letra);
@@ -122,8 +103,8 @@ void GameController::jugar() {
                     int y;
                     do {
                         isPosicionCorrecta = true;
-                        Utils::verificarEntradaNumerica(x, "Ingrese la Posicion en X: ");
-                        Utils::verificarEntradaNumerica(y, "Ingrese la Posicion en Y: ");
+                        Utils::verificarEntradaNumerica(x, "Ingrese la Posicion en la Fila: ");
+                        Utils::verificarEntradaNumerica(y, "Ingrese la Posicion en la Columna: ");
                         if (!this->tablero->isCasillaValida(x - 1, y - 1)) {
                             std::cout << "Posicion Invalida o Bloqueda!!!" << std::endl;
                             isPosicionCorrecta = false;
@@ -142,7 +123,7 @@ void GameController::jugar() {
                     this->verificarPalabra(casillasHorizontales, jugadorActual);
                     this->verificarPalabra(casillasVerticalesSiguientes, jugadorActual);
                     this->verificarPalabra(casillasHorizontalesSiguientes, jugadorActual);
-                    int opcion2;
+                    /*int opcion2;
                     do {
                         std::cout << "¿Deshacer Ultima Jugada?\n1. SI\n2. NO" << std::endl;
                         Utils::verificarEntradaNumerica(opcion2, "Opcion: ");
@@ -164,7 +145,7 @@ void GameController::jugar() {
                                 break;
                             }
                         }
-                    } while (opcion != 1 && opcion != 2);
+                    } while (opcion != 1 && opcion != 2);*/
                     jugadorActual->setMovimientos(jugadorActual->getMovimientos() + 1);
                     break;
                 }

@@ -14,6 +14,8 @@ class Utils {
 public:
     static void verificarEntradaNumerica(int &valorAsignado, std::string textoMostrar);
 
+    static bool isEquals(const std::string &cadena1, const std::string &cadena2);
+
 };
 
 

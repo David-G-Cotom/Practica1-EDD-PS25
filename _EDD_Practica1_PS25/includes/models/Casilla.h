@@ -15,7 +15,6 @@ private:
     bool isHabilitada;
 
 public:
-    Casilla();
     Casilla(Ficha *ficha, bool isHabilitada);
 
     Ficha *getFicha();

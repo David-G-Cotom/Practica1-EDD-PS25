@@ -66,13 +66,13 @@ LinkedList<Casilla*> *Tablero::buscarCasillasVerticales(const int x, const int y
     int limiteInferior;
     int filas = sizeof(this->tablero)/sizeof(this->tablero[0]);
     int iterador = x;
-    while (iterador > 0 && this->tablero[iterador][y]->getIsHabilitada()
-        && this->tablero[iterador][y]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador--;
+    while (iterador > 0 && this->tablero[iterador - 1][y]->getIsHabilitada()
+        && this->tablero[iterador - 1][y]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador--;
 
     limiteSuperior = iterador;
     iterador = x;
-    while (iterador < filas - 1 && this->tablero[iterador][y]->getIsHabilitada()
-        && this->tablero[iterador][y]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador++;
+    while (iterador < filas - 1 && this->tablero[iterador + 1][y]->getIsHabilitada()
+        && this->tablero[iterador + 1][y]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador++;
 
     limiteInferior = iterador;
     for (int i = limiteSuperior; i < limiteInferior + 1; i++) lista->insertar(this->tablero[i][y]);
@@ -85,8 +85,8 @@ LinkedList<Casilla *> *Tablero::buscarCasillasVerticalesSiguientes(const int x, 
     int limiteInferior;
     int filas = sizeof(this->tablero)/sizeof(this->tablero[0]);
     int iterador = x;
-    while (iterador < filas - 1 && this->tablero[iterador][y]->getIsHabilitada()
-        && this->tablero[iterador][y]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador++;
+    while (iterador < filas - 1 && this->tablero[iterador + 1][y]->getIsHabilitada()
+        && this->tablero[iterador + 1][y]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador++;
 
     limiteInferior = iterador;
     for (int i = x; i < limiteInferior + 1; i++) lista->insertar(this->tablero[i][y]);
@@ -100,13 +100,13 @@ LinkedList<Casilla*> *Tablero::buscarCasillasHorizontales(const int x, const int
     int limiteDerecho;
     int columnas = sizeof(this->tablero[0])/sizeof(this->tablero[0][0]);
     int iterador = y;
-    while (iterador > 0 && this->tablero[x][iterador]->getIsHabilitada()
-        && this->tablero[x][iterador]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador--;
+    while (iterador > 0 && this->tablero[x][iterador - 1]->getIsHabilitada()
+        && this->tablero[x][iterador - 1]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador--;
 
     limiteIzquierdo = iterador;
     iterador = y;
-    while (iterador < columnas - 1 && this->tablero[x][iterador]->getIsHabilitada()
-        && this->tablero[x][iterador]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador++;
+    while (iterador < columnas - 1 && this->tablero[x][iterador + 1]->getIsHabilitada()
+        && this->tablero[x][iterador + 1]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador++;
 
     limiteDerecho = iterador;
     for (int i = limiteIzquierdo; i < limiteDerecho + 1; i++) lista->insertar(this->tablero[x][i]);
@@ -119,8 +119,8 @@ LinkedList<Casilla *> *Tablero::buscarCasillasHorizontalesSiguientes(const int x
     int limiteDerecho;
     int columnas = sizeof(this->tablero[0])/sizeof(this->tablero[0][0]);
     int iterador = y;
-    while (iterador < columnas - 1 && this->tablero[x][iterador]->getIsHabilitada()
-        && this->tablero[x][iterador]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador++;
+    while (iterador < columnas - 1 && this->tablero[x][iterador + 1]->getIsHabilitada()
+        && this->tablero[x][iterador + 1]->getFicha()->getLetra() != this->SIMBOLO_CASILLA_LIBRE) iterador++;
 
     limiteDerecho = iterador;
     for (int i = y; i < limiteDerecho + 1; i++) lista->insertar(this->tablero[x][i]);

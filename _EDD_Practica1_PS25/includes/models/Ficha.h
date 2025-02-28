@@ -13,7 +13,6 @@ private:
     int valor;
 
 public:
-    Ficha();
     Ficha(char letra, int valor);
 
     char getLetra();

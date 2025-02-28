@@ -17,7 +17,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Casilla.cpp" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Casilla.cpp.o" "gcc" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Casilla.cpp.o.d"
   "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Ficha.cpp" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Ficha.cpp.o" "gcc" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Ficha.cpp.o.d"
   "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Jugador.cpp" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Jugador.cpp.o" "gcc" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Jugador.cpp.o.d"
-  "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Movimiento.cpp" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.o" "gcc" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.o.d"
   "/mnt/e/Documentos Carlos Cotom/Desktop/David/2025/PS25/LEDD/Practica1/Practica1-EDD-PS25/_EDD_Practica1_PS25/src/models/Tablero.cpp" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o" "gcc" "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o.d"
   )
 

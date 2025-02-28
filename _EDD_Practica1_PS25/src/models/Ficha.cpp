@@ -4,11 +4,6 @@
 
 #include "../../includes/models/Ficha.h"
 
-Ficha::Ficha() {
-    this->letra = ' ';
-    this->valor = 0;
-}
-
 Ficha::Ficha(char letra, int valor) {
     this->letra = letra;
     this->valor = valor;

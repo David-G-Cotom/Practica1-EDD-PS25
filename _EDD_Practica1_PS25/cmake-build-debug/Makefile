@@ -345,30 +345,6 @@ src/models/Jugador.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Jugador.cpp.s
 .PHONY : src/models/Jugador.cpp.s
 
-src/models/Movimiento.o: src/models/Movimiento.cpp.o
-.PHONY : src/models/Movimiento.o
-
-# target to build an object file
-src/models/Movimiento.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.o
-.PHONY : src/models/Movimiento.cpp.o
-
-src/models/Movimiento.i: src/models/Movimiento.cpp.i
-.PHONY : src/models/Movimiento.i
-
-# target to preprocess a source file
-src/models/Movimiento.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.i
-.PHONY : src/models/Movimiento.cpp.i
-
-src/models/Movimiento.s: src/models/Movimiento.cpp.s
-.PHONY : src/models/Movimiento.s
-
-# target to generate assembly for a file
-src/models/Movimiento.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/_EDD_Practica1_PS25.dir/build.make CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.s
-.PHONY : src/models/Movimiento.cpp.s
-
 src/models/Tablero.o: src/models/Tablero.cpp.o
 .PHONY : src/models/Tablero.o
 
@@ -429,9 +405,6 @@ help:
 	@echo "... src/models/Jugador.o"
 	@echo "... src/models/Jugador.i"
 	@echo "... src/models/Jugador.s"
-	@echo "... src/models/Movimiento.o"
-	@echo "... src/models/Movimiento.i"
-	@echo "... src/models/Movimiento.s"
 	@echo "... src/models/Tablero.o"
 	@echo "... src/models/Tablero.i"
 	@echo "... src/models/Tablero.s"

@@ -17,8 +17,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Ficha.cpp.o.d"
   "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Jugador.cpp.o"
   "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Jugador.cpp.o.d"
-  "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.o"
-  "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Movimiento.cpp.o.d"
   "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o"
   "CMakeFiles/_EDD_Practica1_PS25.dir/src/models/Tablero.cpp.o.d"
   "_EDD_Practica1_PS25"

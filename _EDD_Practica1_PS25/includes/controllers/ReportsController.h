@@ -14,7 +14,7 @@ class ReportsController {
 public:
     ReportsController();
 
-    void historialPalabrasJugadas(Stack<std::string> *palabrasEencontradas);
+    void historialPalabrasJugadas(Stack<std::string> *palabrasEncontradas);
 
     void historialPalabrasNoEncontradas(LinkedList<std::string> *palabrasNoEncontradas);
 
@@ -22,7 +22,7 @@ public:
 
     void jugadoresOrdenadoNombre(LinkedList<Jugador> *jugadores);
 
-    void tiempoPromedioTurno(long timepoTotalTurnos, int totalTurnos);
+    void tiempoPromedioTurno(long tiempoTotalTurnos, int totalTurnos);
 
     void movimientoPorJugador(LinkedList<Jugador> *jugadores);
 
