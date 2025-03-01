@@ -50,7 +50,7 @@ void GameController::cargarJugadores() {
 }
 
 void GameController::barajarTurnos() {
-    std::cout << "Barajando turnos..." << std::endl;
+    std::cout << "---------- Barajando turnos ----------" << std::endl;
     srand(time(nullptr));
     int cantidadIntercambios = this->jugadores->getSize() * 2;
     LinkedList<Jugador> *jugadoresAux = this->jugadores;
@@ -71,12 +71,12 @@ void GameController::barajarTurnos() {
         this->turnos->encolar2(aux->getData());
         aux = aux->getNext();
     }
-    std::cout << "Turnos Barajados Exitosamente!!!";
+    std::cout << "Turnos Barajados Exitosamente!!!\n";
 }
 
 void GameController::jugar() {
     std::string nombreArchivo;
-    std::cout << "Ingrese el Nombre del Archivo de palabras: ";
+    std::cout << "Ingrese el Nombre/Direccion del Archivo de Palabras: ";
     getline(std::cin, nombreArchivo);
     this->palabrasIniciales = this->palabrasController->cargarPalabras(nombreArchivo);
     this->palabrasController->ordenarPalabras(this->palabrasIniciales);
@@ -84,10 +84,10 @@ void GameController::jugar() {
     LinkedList<Ficha> *fichasPartida = this->fichasController->crearFichasIniciales(this->palabrasIniciales);
     this->fichasController->distribuirFichas(fichasPartida, this->jugadores);
     this->barajarTurnos();
-    std::cout << "\nINICIANDO PARTIDA!!!" << std::endl;
+    std::cout << "\n---------- INICIANDO PARTIDA ----------";
     while (!this->turnos->isVacio()) {
         Jugador *jugadorActual = this->turnos->desencolar2();
-        std::cout << "Turno de " << jugadorActual->getNombre() << " (Puntaje: " << jugadorActual->getPuntos() << ")" << std::endl;
+        std::cout << "\n---------- Turno de " << jugadorActual->getNombre() << " (Puntaje: " << jugadorActual->getPuntos() << ") ----------" << std::endl;
         this->tablero->imprimirTablero();
         std::cout << "Tus Fichas son: ";
         jugadorActual->imprimirFichas();
@@ -182,10 +182,14 @@ void GameController::jugar() {
             std::cout << "No se Pueden Formar mas Palabras!!!" << std::endl;
             break;
         }
+        if (this->palabrasIniciales->isEmpty()) {
+            std::cout << "No hay Mas Palabras por Formar!!!" << std::endl;
+            break;
+        }
         this->turnos->encolar2(jugadorActual);
     }
-    std::cout << "FIN DE PARTIDA!!!" << std::endl;
-    std::cout << "Resultados de la Partida";
+    std::cout << "\nFIN DE PARTIDA!!!" << std::endl;
+    std::cout << "---------- Resultados de la Partida ----------" << std::endl;
     int opcionOrden;
     do {
         std::cout << "1. Ordenada por Puntaje" << std::endl;

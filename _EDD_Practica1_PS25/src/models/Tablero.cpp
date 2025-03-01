@@ -62,7 +62,7 @@ void Tablero::imprimirTablero() {
 }
 
 bool Tablero::isCasillaValida(const int x, const int y) {
-    return x >= 0 && x < SIZE && y >= 0 && y < SIZE && this->tablero[x][y]->getIsHabilitada();
+    return x >= 0 && x < SIZE && y >= 0 && y < SIZE && this->tablero[x][y]->getIsHabilitada() && this->tablero[x][y]->getFicha()->getLetra() == this->SIMBOLO_CASILLA_LIBRE;
 }
 
 void Tablero::colocarFicha(const int x, const int y, Ficha *ficha) {

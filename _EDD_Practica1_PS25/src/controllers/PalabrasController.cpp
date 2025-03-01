@@ -38,7 +38,7 @@ LinkedList<std::string> *PalabrasController::cargarPalabras(std::string &nombreA
         }
     }
     file.close();
-    std::cout << "Archivo Leido Correctamente" << std::endl;
+    std::cout << "Archivo Leido Correctamente!!!\n" << std::endl;
     return palabrasIniciales;
 }
 
@@ -54,10 +54,11 @@ void PalabrasController::ordenarPalabras(LinkedList<std::string> *palabrasExtrai
             }
         }
     }
-    std::cout << "Palabras Registradas:" << std::endl;
+    std::cout << "---------- Palabras Registradas ----------" << std::endl;
     for (int i = 0; i < palabrasExtraidas->getSize(); ++i) {
         std::cout << palabrasExtraidas->getElement(i)->getValue() << " - ";
     }
+    std::cout << std::endl;
     std::cout << std::endl;
 }
 

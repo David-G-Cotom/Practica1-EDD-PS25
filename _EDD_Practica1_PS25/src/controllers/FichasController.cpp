@@ -15,7 +15,7 @@ FichasController::~FichasController() = default;
 // A cada letra se le asigna un valor aleatorio entre 1 y 10.
 LinkedList<Ficha> *FichasController::crearFichasIniciales(LinkedList<std::string> *palabrasIniciales) {
     srand(time(nullptr));
-    std::cout << "Creando Fichas para el Juego" << std::endl;
+    std::cout << "\n---------- Creando Fichas para el Juego ----------" << std::endl;
     auto *listaGeneralFichas = new LinkedList<Ficha>();
     for (int i = 0; i < palabrasIniciales->getSize(); i++) {
         for (char caracter: *palabrasIniciales->getElement(i)->getData()) {
@@ -27,7 +27,7 @@ LinkedList<Ficha> *FichasController::crearFichasIniciales(LinkedList<std::string
             }
         }
     }
-    std::cout << "Fichas Creadas Exitosamente" << std::endl;
+    std::cout << "Fichas Creadas Exitosamente!!!" << std::endl;
     return listaGeneralFichas;
 }
 
@@ -61,5 +61,5 @@ void FichasController::distribuirFichas(LinkedList<Ficha> *listaGeneralFichas, L
             cantidadFichas--;
         }
     }
-    std::cout << "Fichas Distribuidas Exitosamente" << std::endl;
+    std::cout << "Fichas Distribuidas Exitosamente!!!\n" << std::endl;
 }
